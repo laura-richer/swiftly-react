@@ -20,8 +20,8 @@ const App = (props) => {
   return (
     <Fragment>
       <Meta
-        description="Home page"
-        title="Home"
+        description="Based on how your day has gone, here is your personal soundtrack to match your mood and activities. You can listen to the tracks here or save as a spotify playlist and listen anytime."
+        title="swiftLY | Generate a soundtrack for your day"
       />
       <Header />
       {children}
