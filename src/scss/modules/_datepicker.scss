@@ -1,0 +1,79 @@
+// Datepicker styles
+[am-datepicker] {
+  position: absolute;
+  margin-top: cRem(35);
+  width: 91%;
+  z-index: 10;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.5);
+  box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.5);
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: block;
+    border: 1px solid map-get($color, "white");
+    z-index: -1;
+  }
+
+  tr {
+    td {
+      width: 25%;
+      border: 1px solid map-get($color, "black");
+      cursor: pointer;
+      font-size: cRem(14);
+      font-weight: 200;
+      text-transform: none;
+      @include animate(0.3s, 0s);
+
+      @media #{$above-sm} {
+        font-size: cRem(16);
+      }
+
+      @media #{$above-xl} {
+        font-size: cRem(20);
+      }
+
+      &.current {
+        color: map-get($color, "white");
+        background-color: map-get($color, "brand-primary");
+      }
+
+      &:hover {
+        @media #{$above-sm} {
+          color: map-get($color, "white");
+          background-color: map-get($color, "brand-primary");
+        }
+      }
+
+      &[disabled] {
+        pointer-events: none;
+        opacity: 0.4;
+      }
+
+      &[am-table~="next-year"] {
+        background-color: map-get($color, "light-grey");
+
+        &:hover {
+          @media #{$above-sm} {
+            background-color: map-get($color, "brand-primary");
+          }
+        }
+      }
+
+      span {
+        padding: cRem(20) 0;
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (min-width: 450px) {
+    width: 410px;
+  }
+}

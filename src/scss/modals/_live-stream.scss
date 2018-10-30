@@ -1,0 +1,180 @@
+// Live Stream Modal
+
+[am-live-now~="container"] {
+
+  margin-bottom: .5rem;
+
+  span {
+    font-size: cRem(18);
+    margin-top: 7px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+[am-livestream~="title"] {
+  clear: both;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+[am-livestream~="content-container"],
+[am-livestream~="chat-now-container"],
+[am-livestream~="chat-now-container"] iframe {
+  height: 484px;
+
+  @media #{$above-sm} {
+    height: inherit;
+    min-height: 174px;
+    width: 100%;
+  }
+
+  @media #{$above-md} {
+    height: inherit;
+    min-height: 185px;
+  }
+
+  @media #{$above-lg} {
+    height: inherit;
+    min-height: 207px;
+  }
+
+  @media #{$above-xl} {
+    height: inherit;
+    min-height: 207px;
+  }
+}
+
+[am-livestream~="content-container"] {
+  @media #{$below-sm} {
+    height: inherit;
+  }
+}
+
+[am-livestream~="chat-now-container"],
+[am-livestream~="chat-now-container"] iframe {
+  @media #{$only-sm} {
+    min-height: 174px;
+    height: 174px;
+  }
+
+  @media #{$only-md} {
+    min-height: 185px;
+    height: 185px;
+  }
+
+  @media #{$above-lg} {
+    height: 207px;
+    min-height: 207px;
+  }
+
+  @media #{$above-xl} {
+    height: 207px;
+    min-height: 207px;
+  }
+}
+
+[am-livestream~="description"] {
+  font-size: cRem(13);
+  margin-top: 20px;
+
+  @media #{$above-md} {
+    margin-top: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+[am-tile~="live-stream-rollover"] {
+  background-color: transparentize(map-get($color, "black"), .25);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  z-index: 1;
+
+  h4 {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+    margin-top: -30px;
+  }
+}
+
+[am-tile~="live-recording"] {
+  position: relative;
+  display: inline-block;
+  margin: 0 .1rem 0 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: -1px;
+
+  &:before {
+    background-color: inherit;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-animation: pulseOut 2.5s ease 0s infinite backwards;
+    animation: pulseOut 2.5s ease 0s infinite backwards;
+  }
+}
+
+[am-livestream~="chat-now-container"] {
+  margin-top: cRem(20);
+
+  @media #{$above-sm} {
+    margin-top: 0;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+
+[am-button~="brand-primary"] {
+  &[am-button~="mobile"] {
+    width: 100%;
+    text-align: center;
+
+    [am-icon~="basket"] {
+      margin-top: -5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+// Empty State
+[am-livestream~="no-streams"] {
+  text-align: center;
+
+  p {
+    font-size: cRem(18);
+    margin-bottom: 15px;
+  }
+}
+
+// Quirky button override
+[am-livestream~="chat-active"] {
+  [am-icon~="basket"] {
+    margin-top: 6px !important;
+  }
+}

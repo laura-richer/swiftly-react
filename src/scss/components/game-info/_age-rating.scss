@@ -1,0 +1,25 @@
+[am-livestream~="age-rating"] {
+  height: 49px;
+  width: 44px;
+  float: left;
+
+  @media screen and (max-width: 955px) and (min-width: 750px) {
+    height: 55px;
+    width: auto;
+  }
+
+  @media screen and (min-width: 955px) {
+    height: 60px;
+    width: auto;
+  }
+
+  @media screen and (max-width: 786px) {
+    height: 50px;
+    width: auto;
+  }
+
+  @media screen and (max-width: 750px) {
+    height: auto;
+    width: 44px;
+  }
+}

@@ -1,0 +1,30 @@
+// Video page styles
+[am-title~="video"] {
+  h2 {
+    display: inline;
+    margin-right: 30px;
+    float: left;
+    max-width: 100%;
+
+    @media #{$above-sm} {
+      max-width: 90%;
+    }
+
+    @media #{$above-md} {
+      max-width: 70%;
+      line-height: cRem(70);
+    }
+  }
+
+  [am-button] {
+    float: left;
+
+    @media #{$above-sm} {
+      float: right;
+    }
+
+    [am-icon] {
+      margin-top: -8px;
+    }
+  }
+}

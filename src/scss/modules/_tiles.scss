@@ -1,0 +1,737 @@
+// Tiles
+[am-tile~="container"] {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+
+  @media #{$above-lg} {
+    padding-top: 116%;
+  }
+
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  & > div {
+    @include bkg-image('', no-repeat, center top, 100% auto);
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      width: 100%;
+      height: 10px;
+      background-color: inherit;
+    }
+  }
+}
+
+//Tile rollover
+[am-tile~="container"] {
+  [am-tile~="rollover"],
+  [am-tile~="rollover-noanim"] {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: cRem(10) cRem(17) cRem(19);
+    transition: top 0.2s ease 0s, top 0.2s ease 0s;
+
+    @media #{$above-xs} {
+      top: 84%;
+      height: 100%;
+    }
+
+    @media #{$above-md} {
+      top: 75%;
+    }
+
+    @media #{$above-lg} {
+      top: 82%;
+    }
+
+    @media #{$only-lg} {
+      padding: cRem(10) cRem(14) cRem(19);
+    }
+
+    p {
+      font-size: cRem(16);
+      font-weight: 200;
+      line-height: cRem(22);
+      transition: opacity 0.3s ease 0s, opacity 0.3s ease 0s;
+
+      @media #{$above-lg} {
+        font-size: cRem(13);
+        line-height: cRem(20);
+
+        &[am-tile~="description"] {
+          font-size: cRem(13);
+          line-height: cRem(17);
+        }
+      }
+
+      @media #{$above-xl} {
+        font-size: cRem(16);
+        line-height: cRem(24);
+
+        &[am-tile~="description"] {
+          font-size: cRem(16);
+          line-height: cRem(22);
+        }
+      }
+
+      &[am-tile~="description"] {
+        margin-top: cRem(20);
+      }
+
+      &[am-tile~="description"],
+      &[am-tile~="link"] {
+        opacity: 0;
+      }
+
+      &[am-tile~="link"] {
+        margin-top: cRem(15);
+        font-weight: 600;
+      }
+
+      &[am-tile~="sub-description"] {
+        margin-top: cRem(25);
+
+        @media #{$above-xl} {
+          margin-top: cRem(45);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    @media #{$above-sm} {
+      [am-tile~="rollover"] {
+        transition-duration: 0.3s;
+
+        @media #{$above-md} {
+          top: 0;
+        }
+
+        [am-tile~="description"],
+        [am-tile~="link"] {
+          transition-delay: 0.5s, 0;
+
+          @media #{$above-md} {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Tile tags
+[am-tile~="tag"] {
+  width: auto;
+  display: inline-block;
+  margin-top: cRem(15);
+
+  p {
+    font-size: cRem(14);
+    font-weight: 600;
+    padding: 3px 10px 4px;
+    text-transform: capitalize;
+  }
+
+  &[am-bg~="xbox"] {
+    p {
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Live now
+[am-tile~="live-now"] {
+  background-color: map-get($color, "red");
+  position: relative;
+  top: 10px;
+  left: 10px;
+  padding: cRem(3) cRem(6) cRem(6);
+  z-index: 1;
+  line-height: cRem(14);
+  border-radius: cRem(5);
+
+  span {
+    font-size: cRem(14);
+    line-height: cRem(14);
+    font-weight: 600;
+
+    i {
+      position: relative;
+      top: cRem(3);
+      display: inline-block;
+      width: cRem(8);
+      height: cRem(8);
+      border-radius: 50%;
+      background-color: #FFF;
+
+      &:before {
+        background-color: inherit;
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        animation: pulseOut 2500ms ease 0ms infinite backwards;
+      }
+    }
+  }
+}
+
+// Home page stream
+[am-section~="today"] {
+  [am-tile~="container"] {
+    &[am-tile~="live-stream"] {
+      padding-top: 56.4%;
+      background-color: map-get($color, "dark");      
+    }
+
+    @media #{$above-xl} {
+      padding-top: 141%
+    }
+  }
+}
+
+
+// Tile overrides
+[am-tile~="upcoming"],
+[am-tile~="searchresults-streams"],
+[am-tile~="searchresults-videos"],
+[am-tile~="searchresults-offers"],
+[am-tile~="upcoming-home"] {
+  position: relative;
+  background-color: map-get($color, "dark");
+  padding-top: 86%;
+
+  @media #{$above-sm} {
+    padding-top: 86%;
+  }
+
+  @media #{$above-lg} {
+    padding-top: 76%;
+  }
+
+  &:hover {
+    [am-tile~="rollover"] {
+      @media #{$above-md} {
+        top: 0;
+      }
+
+      @media #{$above-lg} {
+        top: 28%;
+      }
+
+      @media #{$above-xl} {
+        top: 40%;
+      }
+    }
+  }
+
+  [am-tile~="rollover"] {
+    background-color: map-get($color, "dark");
+    padding: cRem(20) cRem(30);
+    top: 55%;
+
+    @media (min-width: 375px) {
+      top: 62%;
+    }
+
+    @media #{$above-sm} {
+      top: 57%;
+    }
+
+    @media #{$above-md} {
+      top: 52%;
+    }
+
+    @media #{$above-lg} {
+      top: 63%;
+    }
+
+    @media #{$above-xl} {
+      top: 71%;
+    }
+    
+    [am-game-details~="avatar"] {
+      width: 30px;
+      height: 30px;
+      float: left;
+      margin-left: 10px;
+    }
+  }
+
+  [am-header] {
+    position: relative;
+    margin-top: cRem(5);
+
+    &:after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+
+    [am-dates] {
+      font-size: cRem(16);
+      font-weight: 300;
+
+      @media #{$above-lg} {
+        width: 60%;
+        float: left;
+        font-size: cRem(13);
+        line-height: cRem(30);
+      }
+
+      @media #{$above-xl} {
+        font-size: cRem(18);
+      }
+    }
+
+    [am-game-details~="gamertag"] {
+      margin: 0;
+
+      @media #{$above-lg} {
+        float: right;
+      }
+
+      [am-game-details~="avatar"] {
+        width: 30px;
+        height: 30px;
+        margin-right: 0;
+      }
+      
+      h3 {
+        font-size: cRem(18);
+        line-height: cRem(20);
+        margin-right: 0;
+
+        @media #{$above-md} {
+          font-size: cRem(13);
+        }
+
+        @media #{$above-xl} {
+          font-size: cRem(18);
+        }
+      }
+    }
+  }
+
+  [am-font~="4"] {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+// Search results streams overrides
+[am-tile~="searchresults-streams"] {
+  padding-top: 86%;
+
+  @media #{$above-lg} {
+    padding-top: 76%;
+  }
+}
+
+// Videos overrides
+[am-tile~="searchresults-videos"] {
+  background-color: none;
+  padding-top: 56%;
+
+  &:hover {
+    [am-tile~="rollover"] {
+      @media #{$above-md} {
+        top: 0;
+      }
+
+      @media #{$above-lg} {
+        top: 42%;
+      }
+
+      @media #{$above-xl} {
+        top: 40%;
+      }
+    }
+  }
+
+  [am-tile~="rollover"] {
+    background-color: transparentize(map-get($color, "black"), .4);
+    top: 65%;
+
+    @media #{$above-sm} {
+      top: 70%;
+    }
+
+    @media #{$above-md} {
+      top: 55%;
+    }
+
+    @media #{$above-lg} {
+      top: 66%;
+    }
+
+    @media #{$above-xl} {
+      top: 73%;
+    }
+  }
+
+  [am-font~="4"] {
+    font-weight: 400;
+    font-size: cRem(22);
+  }
+}
+
+// Upcoming home
+[am-tile~="upcoming-home"] {
+  background-color: none;
+  padding-top: 90%;
+
+  @media #{$above-sm} {
+    padding-top: 90%;
+  }
+
+  @media #{$above-md} {
+    padding-top: 153px;
+  }
+
+  @media #{$above-lg} {
+    padding-top: 199px;
+  }
+
+  @media #{$above-xl} {
+    padding-top: 267px;
+  }
+
+  @media #{$above-md} {
+    margin-bottom: cRem(30);
+  }
+
+  &:hover {
+    [am-tile~="rollover"] {
+      @media #{$above-md} {
+        top: 0;
+      }
+
+      @media #{$above-xl} {
+        top: 20%;
+      }
+    }
+  }
+
+  [am-tile~="rollover"] {
+    top: 58%;
+
+    @media (min-width: 375px) {
+      top: 64%;
+    }
+
+    @media #{$above-sm} {
+      top: 62%;
+    }
+
+    @media #{$above-md} {
+      background-color: transparentize(map-get($color, "black"), .4);
+      top: 28%;
+    }
+
+    @media #{$above-lg} {
+      top: 52%;
+    }
+
+    @media #{$above-xl} {
+      top: 65%;
+    }
+  }
+
+}
+
+
+// Search results offers overrides
+[am-tile~="searchresults-offers"] {
+  padding-top: 153.2%;
+  visibility: visible;
+
+  [am-tile~="rollover-noanim"] {
+    top: 84%;
+
+    @media #{$above-sm} {
+      top: 85%;
+    }
+
+    @media #{$above-md} {
+      top: 84%;
+    }
+
+    @media #{$above-lg} {
+      top: 82%;
+    }
+
+    @media #{$above-xl} {
+      top: 85%;
+    }
+
+    p[am-tile~="description"] {
+      opacity: 1;
+      font-size: cRem(16);
+      margin-top: 0;
+      line-height: cRem(16);
+    }
+  }
+}
+
+// Calendar Tiles
+
+[am-calendar-tile~="game-bg"] {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  padding-top: 116%;
+  position: relative;
+}
+
+[am-calendar-tile~="game-desc"] {
+  background-color: map-get($color, "dark");
+  min-height: 106px;
+  position: relative;
+  padding: cRem(15) cRem(20) 0;
+
+  p {
+    font-weight: 100;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  [am-game-details~="gamertag"] {
+    margin: 0;
+
+    [am-game-details~="avatar"] {
+      width: 30px;
+      height: 30px;
+      margin-left: cRem(10);
+    }
+    
+    h3 {
+      font-size: cRem(18);
+      line-height: cRem(20);
+      margin-right: 0;
+
+      @media #{$above-md} {
+        font-size: cRem(13);
+      }
+
+      @media #{$above-xl} {
+        font-size: cRem(18);
+      }
+    }
+  }
+}
+
+[am-calendar-tile~="empty"] {
+  background-color: map-get($color, "black");
+}
+
+[am-calendar-tile~="calendar-link"] {
+  display: block;
+
+  &:hover {
+    [am-calendar-tile~="hover"] {
+      @media #{$above-sm} {
+        display: block;
+      }
+
+      &.active {
+        @media #{$below-sm} {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+[am-calendar-tile~="hover"] {
+  background-color: transparentize(map-get($color, "navy"), .2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+
+  [am-calendar-tile~="hoverInner"] {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    [am-calendar-tile-state] {
+      height: 100%;
+
+      [am-calendar-tile-state-links] {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+// Offers hover state
+[am-offers~="wrap"] {
+  visibility: hidden;
+
+  // styles for fancy carousel
+  slick {
+
+    &:hover {
+      @media #{$above-sm} {
+        [am-offers~="child"].slick-active a {
+          opacity: .1;
+        }
+      }
+    }
+
+    [am-offers~="child"] {
+      visibility: hidden;
+      pointer-events: none;
+
+      a {
+        visibility: visible;
+        opacity: .1;
+        transition: opacity 0.5s ease 0s, opacity 0.5s ease 0s;
+        pointer-events: none;
+      }
+
+      &.slick-active {
+        pointer-events: none;
+
+        a {
+          opacity: 1;
+          pointer-events: auto;
+                
+          &:hover {
+            @media #{$above-sm} {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // styles for regular search results carousel
+  &:hover {
+    @media #{$above-sm} {
+      [am-offers~="child"] a {
+        opacity: .1;
+      }
+    }
+  }
+
+  [am-offers~="child"] {
+    visibility: hidden;
+
+    a {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.5s ease 0s, opacity 0.5s ease 0s;
+              
+      &:hover {
+        @media #{$above-sm} {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // Offers side pagination
+  [am-offers~="pagination"] {
+    visibility: visible;
+
+    a {
+      position: absolute;
+      height: 100%;
+
+      &[am-offers~="arrow-left"] {
+        left: -100%;
+
+        @media #{$above-sm} {
+          left: -50%;
+        }
+
+        @media #{$above-md} {
+          left: -33.333%;
+        }
+
+        @media #{$above-lg} {
+          left: -25%;
+        }
+      }
+
+      &[am-offers~="arrow-right"] {
+        right: -100%;
+
+        @media #{$above-sm} {
+          right: -50%;
+        }
+
+        @media #{$above-md} {
+          right: -33.333%;
+        }
+
+        @media #{$above-lg} {
+          right: -25%;
+        }
+      }
+    }
+  }
+}
+
+[am-tile~="calendar-placeload"] {
+  padding-top: 153%;
+}
+
+[am-tile~="profile"] {
+  padding-top: 164%;
+  @media #{$above-md} {
+    padding-top: 225%;
+  }
+}
+
+[am-col]:first-child {
+  [am-tile~="searchresults-videos"] {
+    margin-bottom: 0;
+    @media #{$above-xs} {
+      margin-bottom: 0.75rem;
+    }
+
+    @media #{$above-sm} {
+      margin-bottom: 0;
+    }
+  }
+}

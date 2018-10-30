@@ -1,0 +1,35 @@
+// Stream stats
+table {
+  float: right;
+  text-align: left;
+  width: 100%;
+
+  th, td {
+    width: 50%;
+  }
+
+  th {
+    font-size: cRem(18);
+
+    @media #{$above-xs} {
+      font-size: cRem(22);
+    }
+
+    @media #{$above-lg} {
+      font-size: cRem(30);
+    }
+  }
+
+  td {
+    font-size: cRem(10);
+    text-transform: uppercase;
+
+    @media #{$above-xs} {
+      font-size: cRem(12);
+    }
+
+    @media #{$above-lg} {
+      font-size: cRem(16);
+    }
+  }
+}

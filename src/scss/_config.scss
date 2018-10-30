@@ -1,0 +1,50 @@
+// Color
+// --------------------------------
+
+$color: (
+  "black"           : #000000,
+  "navy"            : #171D29,
+  "white"           : #ffffff,
+  "grey"            : #505050,
+  "light-grey"      : #EFF0EE,
+  "middle-grey"     : #4C4C4C,
+  "brand-primary"   : #107C10,
+  "blue"            : #00436F,
+  "light-blue"      : #00C0F7,
+  "dark"            : #0A0C10,
+  "yellow"          : #FFF200,
+  "red"             : #FF0000,
+);
+
+
+// Grid
+// --------------------------------
+
+$am-columns: 12;
+
+$am-breakpoints: (
+  "xs": (
+    "width": 480px,
+    "padding": .75rem
+  ),
+  "sm": (
+    "width": 750px,
+    "padding": 1rem
+  ),
+  "md": (
+    "width": 960px,
+    "padding": 1rem
+  ),
+  "lg": (
+    "width": 1200px,
+    "padding": 1rem
+  ),
+  "xl": (
+    "width": 1560px,
+    "padding": 1rem
+  )
+);
+
+$only-xs: "only screen and (max-width: #{map-get(map-get($am-breakpoints, xs), width) - 1px})";
+$below-xs: "only screen and (max-width: #{map-get(map-get($am-breakpoints, xs), width) - 1px})";
+$above-xs: "only screen and (min-width: #{map-get(map-get($am-breakpoints, xs), width)})";

@@ -1,0 +1,6 @@
+// Disable ng-animate on IE11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ng-hide.ng-hide-animate{
+    display: none !important;
+  }
+}

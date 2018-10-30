@@ -1,0 +1,14 @@
+# OSX
+.DS_Store
+
+# Editor
+*.code-workspace
+
+# Package manager
+node_modules/
+
+# Logs
+*.log
+
+# Compiled files
+.next/

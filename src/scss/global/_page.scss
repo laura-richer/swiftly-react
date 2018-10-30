@@ -1,0 +1,110 @@
+// Page
+// --------------------------------
+
+* {
+  &,
+  &::before,
+  &::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    outline-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  color: map-get($color, "white");
+  background-color: map-get($color, "navy");
+  width: 1px;
+  min-width: 100%
+}
+
+[ng-cloak] {
+  display: none !important;
+}
+
+[am-row~="flex"] {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$below-sm} {
+    &[am-row~="mobile"] {
+      &[am-row~="column"] {
+        flex-direction: column;
+      }
+
+      [am-flex-order~="1"] {
+        order: 1;
+      }
+
+      [am-flex-order~="2"] {
+        order: 2;
+      }
+    }
+  }
+
+  &:before {
+    display: block;
+  }
+}
+
+[am-container] {
+  @media #{$below-sm} {
+    max-width: 420px;
+  }
+}
+
+[am-section] {
+  padding-bottom: cRem(55);
+}
+
+a {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+[am-overlay] {
+  display: none;
+  background:  transparentize(map-get($color, "navy"), .3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  @media #{$above-sm} {
+    position: fixed;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+// Tables
+// --------------------------------
+
+table {
+  border-spacing: 0;
+  background: transparent;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+// Forms
+// --------------------------------
+
+::-webkit-input-placeholder {
+  opacity: 1; // Fixes Edge placeholder bug
+}

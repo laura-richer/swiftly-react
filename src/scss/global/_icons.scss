@@ -1,0 +1,225 @@
+[ui-view~="icons"] {
+  display: none;
+}
+
+// Global icons
+[am-icon] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// Xbox
+[am-icon~="xbox"] {
+  width: 40px;
+  height: 40px;
+}
+
+// calender
+[am-icon~="calendar"] {
+  width: 36px;
+  height: 40px;
+
+  @media #{$above-lg} {
+    width: 47px;
+    height: 52px;
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 26px;
+    height: 30px;
+  }
+}
+
+// calendar alt
+[am-icon~="calendar-alt"] {
+  width: 25px;
+  height: 28px;
+}
+
+// cross
+[am-icon~="cross"] {
+  width: 28px;
+  height: 27px;
+}
+
+// cart
+[am-icon~="basket"] {
+  width: 62px;
+  height: 44px;
+}
+
+// sign in
+[am-icon~="sign-in"] {
+  width: 45px;
+  height: 45px;
+  margin-top: -6px;
+
+  @media #{$above-sm} {
+    width: 55px;
+    height: 55px;
+  }
+
+  @media #{$above-lg} {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+// arrow left
+[am-icon~="arrow-left"] {
+  width: 30px;
+  height: 30px;
+}
+
+// arrow right
+[am-icon~="arrow-right"] {
+  width: 30px;
+  height: 30px;
+}
+
+// Arrow down
+[am-icon~="arrow-down"] {
+  width: 40px;
+  height: 40px;
+}
+
+// Arrow up
+[am-icon~="arrow-up"] {
+  width: 40px;
+  height: 40px;
+}
+
+// live now
+[am-icon~="live-now"] {
+  width: 21px;
+  height: 17px;
+  margin-left: 1px;
+}
+
+// play
+[am-icon~="play"] {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+// expand
+[am-icon~="expand"] {
+  width: 14px;
+  height: 14px;
+}
+
+// share
+[am-icon~="share"] {
+  width: 28px;
+  height: 28px;
+
+  @media #{$above-sm} {
+    width: 35px;
+    height: 35px;
+  }
+
+  @media #{$above-md} {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+// facebook
+[am-icon~="facebook"] {
+  width: 33px;
+  height: 33px;
+
+  @media #{$below-xs} {
+    width: 12px;
+    height: 28px;
+  }
+}
+
+// twitter
+[am-icon~="twitter"] {
+  width: 35px;
+  height: 28px;
+
+  @media #{$below-xs} {
+    width: 30px;
+    height: 23px;
+  }
+}
+
+// chat
+[am-icon~="chat"] {
+  width: 24px;
+  height: 21px;
+}
+
+// information
+[am-icon~="information"] {
+  width: 31px;
+  height: 31px;
+}
+
+// apple
+[am-icon~="apple"] {
+  width: 31px;
+  height: 38px;
+}
+
+// apple
+[am-icon~="google"] {
+  width: 31px;
+  height: 32px;
+}
+
+// outlook
+[am-icon~="outlook"] {
+  width: 31px;
+  height: 31px;
+}
+
+// yahoo
+[am-icon~="yahoo"] {
+  width: 31px;
+  height: 18px;
+}
+
+// Email
+[am-icon~="email"] {
+  width: 35px;
+  height: 22px;
+}
+
+// Search
+[am-icon~="search"] {
+  width: 32px;
+  height: 34px;
+}
+
+// Mixer
+[am-icon~="mixer"] {
+  width: 25px;
+  height: 23px;
+}
+
+// Mixer logo
+[am-icon~="mixerlogo"] {
+  width: cRem(108);
+  height: cRem(30);
+}
+
+// Calendar Info
+[am-icon~="info"] {
+  width: 132px;
+  height: 133px;
+}
+
+// Calendar play
+[am-icon~="calplay"] {
+  width: 132px;
+  height: 133px;
+}
+
+[am-icon-title] {
+  color: map-get($color, "white");
+  padding-top: 10px;
+}

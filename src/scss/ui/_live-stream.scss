@@ -1,0 +1,264 @@
+// Live stream
+[am-stream] {
+  iframe {
+    width: 100%;
+  }
+}
+
+[am-stream~="container"] {
+  margin-top: 0;
+  border-bottom: 1px solid map-get($color, "middle-grey");
+  padding-bottom: cRem(35);
+
+  @media #{$above-xs} {
+    padding-bottom: cRem(35);
+  }
+
+  @media #{$above-md} {
+    padding-bottom: cRem(70);
+  }
+
+  [am-stream~="wrapper"] {
+    position: relative;
+    padding-bottom: 56.25%;
+    background-size: cover;
+    height: 0;
+
+    iframe,
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+
+  [am-button] {
+    margin-top: cRem(35);
+  }
+}
+
+[am-stream~="chat"] {
+  iframe {
+    height: 600px;
+
+    @media #{$above-sm} {
+      height: 440px;
+    }
+
+    @media #{$above-lg} {
+      height: 351px;
+    }
+
+    @media #{$above-xl} {
+      height: 487px;
+    }
+  }
+}
+
+// Not live
+[am-title~="not-live"] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  h2 {
+    display: block;
+
+    @media #{$above-md} {
+      display: inline;
+    }
+  }
+
+  i {
+    float: right;
+    height: 43px;
+
+    @media #{$above-sm} {
+      margin-top: 20px;
+    }
+  }
+}
+
+[am-stream~="not-live"] {
+  display: block;
+
+  &[am-carousel] {
+    margin: 0 0 cRem(10) 0;
+    width: 100%;
+
+    @media #{$above-md} {
+      margin-right: cRem(32);
+    }
+
+    nav {
+      display: block;
+      float: right;
+      top: cRem(-45);
+      position: relative;
+
+      @media #{$above-md} {
+        display: inline-block;
+        float: none;
+        top: 0;
+        margin-right: cRem(35);
+      }
+    }
+
+    [am-arrow] {
+      width: cRem(30);
+      height: cRem(30);
+      top: cRem(15);
+
+      @media #{$above-sm} {
+        width: cRem(30);
+        height: cRem(30);
+        top: cRem(2);
+      }
+
+      @media #{$above-sm} {
+        width: cRem(35);
+        height: cRem(35);
+        top: cRem(2);
+      }
+    }
+
+    [am-arrow] + [am-arrow] {
+      margin-left: 0;
+    }
+
+    h4 {
+      display: inline-block;
+      margin: 0 cRem(20);
+      font-size: cRem(16);
+      line-height: cRem(22);
+      font-weight: 400;
+
+      span {
+        font-size: cRem(24);
+        font-weight: 700;
+      }
+    }
+
+    @media #{$above-sm} {
+
+      [am-arrow] {
+        width: cRem(35);
+        height: cRem(35);
+      }
+
+      h4 {
+        margin: 0 cRem(15);
+        max-width: auto;
+      }
+    }
+
+    @media #{$above-lg} {
+      width: auto;
+      [am-arrow] {
+        width: cRem(37);
+        height: cRem(37);
+      }
+
+      h4 {
+        margin: 0 cRem(25);
+        font-size: cRem(20);
+        line-height: cRem(28);
+
+        span {
+          font-size: cRem(29);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+[am-live] {
+  [am-tile~="live-stream-rollover"] {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    z-index: 1;
+
+    &:before {
+      display: none;
+    }
+
+    h4 {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-weight: 400;
+      margin-top: -30px;
+
+      [am-icon] {
+        margin-right: 20px;
+      }
+    }
+
+    @media #{$below-md} {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.75);
+
+      a {
+        background-color: transparent;
+        opacity: 1;
+      }
+    }
+  }
+
+  [am-tile~="chat-now"] {
+    position: absolute;
+    top: cRem(20);
+    right: cRem(20);
+    z-index: 2;
+
+    &:hover {
+      @media #{$above-sm} {
+        a {
+          background-color: map-get($color, "white");
+          color: map-get($color, "navy");
+        }
+
+        [am-icon] {
+          g {
+            fill: map-get($color, "navy");
+          }
+        }
+      }
+    }
+
+    a {
+      display: block;
+      position: relative;
+      padding: cRem(9) cRem(11);
+      height: 41px;
+      margin-top: 0;
+
+      h4 {
+        font-size: cRem(16);
+        line-height: cRem(20);
+        text-align: right;
+        font-weight: 600;
+
+        [am-icon] {
+          margin-right: cRem(10);
+          width: 21px;
+          height: 21px;
+          margin-top: cRem(-2);
+        }
+      }
+    }
+  }
+
+  &[am-stream] {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,38 @@
+// Helper classes
+// --------------------------------
+
+// Positioning
+[am-float~="left"] {
+  display: block;
+  float: left;
+}
+
+[am-float~="right"] {
+  display: block;
+  float: right;
+}
+
+[am-display~="inline-block"] {
+  display: inline-block;
+}
+
+// Text align
+[am-align~="left"] {
+  text-align: left;
+}
+
+[am-align~="center"] {
+  text-align: center;
+}
+
+[am-align~="right"] {
+  text-align: right;
+}
+
+[am-cursor~="pointer"] {
+  cursor: pointer;
+  display: inline;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-top: 5px;
+}

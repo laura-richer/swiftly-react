@@ -1,0 +1,270 @@
+// Game details
+
+[am-game-details~="container"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid map-get($color, "middle-grey");
+
+  @media #{$above-xs} {
+    padding-top: cRem(35);
+    padding-bottom: cRem(35);
+  }
+
+  @media #{$above-md} {
+    padding-top: cRem(70);
+    padding-bottom: cRem(70);
+  }
+
+  [am-row~="flex"] {
+    @media #{$above-md} {
+      align-items: center;
+    }
+  }
+
+  [am-button] {
+    [am-icon] {
+      float: right;
+    }
+  }
+
+  [am-font~="2"] {
+    margin-bottom: cRem(20);
+    line-height: cRem(32);
+    font-weight: 200;
+
+    @media #{$above-xs} {
+      line-height: cRem(40);
+    }
+
+    @media #{$above-lg} {
+      line-height: cRem(50);
+    }
+  }
+
+  [am-font~="4"] {
+    font-size: cRem(18);
+    margin-bottom: cRem(20);
+    font-weight: 400;
+
+    @media #{$above-lg} {
+      font-size: cRem(24);
+    }
+  }
+
+  p {
+    font-weight: 200;
+  }
+
+  [am-game-details~="product-information"] {
+    padding-top: cRem(20);
+
+    @media #{$above-sm} {
+      padding-top: 0;
+    }
+  }
+
+  [am-game-details~="age-rating"] {
+    margin-top: cRem(23);
+    width: cRem(56);
+  }
+
+  [am-game-details~="product-description"] {
+    width: 100%;
+
+    @media #{$above-lg} {
+      width: 70%
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  [am-game-details~="product-cta"] {
+    margin-top: cRem(25);
+
+    @media #{$above-sm} {
+      margin-top: cRem(40);
+    }
+
+    h2,
+    img,
+    [am-button] {
+      display: inline-block;
+    }
+
+    h2,
+    [am-button] {
+      margin-right: cRem(15);
+
+      @media #{$above-lg} {
+        margin-right: cRem(36);
+      }
+    }
+
+    img {
+      height: 56px;
+      position: relative;
+      top: 23px;
+    }
+
+    @media #{$below-sm} {
+      img {
+        height: 45px;
+        top: 15px;
+      }
+    }
+
+    @media #{$below-md} {
+      h2,
+      [am-button] {
+        font-size: cRem(24);
+      }
+
+      img {
+        height: 50px;
+        top: 19px;
+      }
+    }
+
+    @media #{$below-xs} {
+      h2 {
+        font-size: cRem(18);
+      }
+
+      [am-button] {
+        font-size: cRem(18);
+      }
+
+      img {
+        height: 50px;
+        top: 19px;
+      }
+    }
+  }
+
+  [am-game-details~="add-to-calendar"] {
+    margin-top: cRem(40);
+
+    p,
+    i {
+      display: inline-block;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: cRem(20);
+      line-height: 41px;
+
+      @media #{$above-lg} {
+        font-size: cRem(28);
+      }
+    }
+
+    i {
+      margin: -10px 15px 0 0;
+    }
+  }
+}
+
+// Gamertag
+[am-game-details~="gamertag"] {
+  display: flex;
+  margin-bottom: cRem(23);
+  margin-top: cRem(23);
+
+  [am-game-details~="avatar"] {
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: cRem(10);
+    width: cRem(42);
+    height: cRem(42);
+
+    @media #{$above-md} {
+      width: cRem(64);
+      height: cRem(64);
+      margin-right: cRem(15);
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    font-weight: 100;
+    font-size: cRem(26);
+    align-self: center;
+
+    @media #{$above-md} {
+      font-size: cRem(36);
+    }
+  }
+}
+
+[am-row~="not-live"] {
+  [am-game-details~="gamertag"] {
+    display: inline-flex;
+    margin-top: 0;
+  }
+}
+
+// Live game details
+[am-game-details~="live"] {
+  [am-button],
+  [am-game-details~="age-rating"] {
+    float: left;
+    margin-right: 2%;
+    margin-top: cRem(23);
+  }
+
+  [am-button]:last-child {
+    margin-right: 0;
+  }
+
+  [am-game-details~="game-rating"] {
+    @media #{$above-sm} {
+      display: block;
+      float: none;
+    }
+  }
+
+  [am-button] {
+    width: 100%;
+
+    @media #{$only-sm} {
+      width: 50%;
+    }
+
+    @media #{$above-sm} {
+      width: 184px;
+      margin-top: cRem(30);
+    }
+
+    @media #{$above-md} {
+      width: calc(50% - 7px);
+    }
+
+    @media #{$above-lg} {
+      width: 24%;
+    }
+  }
+
+  [am-button~="brand-primary"] {
+
+    @media #{$only-sm} {
+      width: 49%;
+    }
+
+    @media #{$above-sm} {
+      width: 43%;
+    }
+
+    @media #{$above-md} {
+      width: 100%;
+    }
+
+    @media #{$above-lg} {
+      min-width: 28%;
+      width: auto;
+      max-width: 320px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+// Search page styles
+[am-section~="search"] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+[am-title~="search"] {
+  strong {
+    font-weight: 600;
+  }
+}

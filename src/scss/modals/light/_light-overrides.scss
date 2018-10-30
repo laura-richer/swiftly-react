@@ -1,0 +1,120 @@
+body.light {
+  background: map-get($color, "white");
+  color: map-get($color, "navy");
+
+  a {
+    color: map-get($color, "navy");
+  }
+
+  [am-tile],
+  [am-calendar-tile] {
+    g {
+      color: map-get($color, "white");
+    }
+  }
+
+  // Icons
+  [am-icon~="cross"],
+  [am-icon~="search"] {
+    g {
+      fill: map-get($color, "navy");
+    }
+  }
+
+  [am-icon="arrow-down"],
+  [am-icon="arrow-up"] {
+    g {
+      stroke: map-get($color, "navy");
+    }
+  }
+
+  [am-arrow] {
+    border-color: map-get($color, "navy");
+    &:after {
+      border-color: map-get($color, "navy");
+    }
+  }
+
+  // Buttons
+  [am-button] {
+    &[am-button~="brand-primary"] {
+      &:hover {
+        @media #{$above-sm} {
+          background-color: lighten(map-get($color, "brand-primary"), 5%);
+          color: map-get($color, "white");
+
+          [am-icon] {
+            g {
+              fill: map-get($color, "white");
+            }
+          }
+        }
+      }
+    }
+
+    &[am-button~="dark"] {
+      &:hover {
+        @media #{$above-sm} {
+          background-color: transparentize(map-get($color, "navy"), .5);
+          color: map-get($color, "white");
+
+          [am-icon] {
+            g {
+              fill: map-get($color, "white");
+            }
+          }
+        }
+      }
+
+      &.active {
+        &:hover {
+          @media #{$above-sm} {
+            background-color: lighten(map-get($color, "brand-primary"), 5%);
+          }
+        }
+      }
+    }
+
+    &[am-button~="white"] {
+      background-color: map-get($color, "navy");
+      color: map-get($color, "white");
+      &:hover {
+        @media #{$above-sm} {
+          background-color: transparentize(map-get($color, "navy"), .5);
+
+          [am-icon] {
+            g {
+              fill: map-get($color, "white");
+            }
+          }
+        }
+      }
+    }
+
+    &[am-button~="white-border"] {
+      color: map-get($color, "navy");
+
+      &:hover {
+        @media #{$above-sm} {
+          color: map-get($color, "white");
+          background-color: map-get($color, "navy")
+        }
+      }
+
+      &.active {
+        color: map-get($color, "white");
+        background-color: map-get($color, "navy")
+      }
+    }
+  }
+
+  // Calendar stuff
+  [am-calendar-tile~="hover"] {
+    background-color: transparentize(map-get($color, "black"), .2);
+  }
+
+  [am-calendartoggle] {
+    border-color: map-get($color, "navy");
+  }
+}
+

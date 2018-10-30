@@ -1,0 +1,106 @@
+// Stream page styles
+[am-title~="stream"] {
+  padding-bottom: cRem(18);
+
+  @media #{$above-xs} {
+    padding-bottom: cRem(45);
+  }
+
+  [am-font~="2"] {
+    display: inline;
+    max-width: 100%;
+
+    @media #{$below-sm} {
+      line-height: cRem(34);
+    }
+
+    @media #{$above-xs} {
+      float: left;
+      max-width: 60%;
+    }
+
+    @media #{$above-lg} {
+      line-height: cRem(55);
+      max-width: 60%;  
+    }
+
+    @media #{$above-xl} {
+      max-width: 70%;  
+    }
+  }
+
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+
+  [am-button] {
+    @media #{$below-lg} {
+      clear: both;
+      float: left;
+    }
+
+    @media #{$above-lg} {
+      margin-top: 10px;
+    }
+  }
+  
+  table {
+    margin-top: 10px;
+
+    @media #{$above-lg} {
+      margin-top: 3px;
+    }
+  }
+
+  th,
+  td {
+    font-weight: 400;
+  }
+}
+
+[am-title~="not-live"] {
+  h1 {
+    float: none;
+  }
+}
+
+[am-section~="stream"] {
+  @media #{$below-sm} {
+    padding-bottom: cRem(20);
+  }
+
+  [am-font~="2"] {
+    @media #{$above-sm} {
+      width: 50%;
+      float: left;
+
+      &.no-profile {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+  [am-game-details~="gamertag"] {
+    margin-top: cRem(10);
+    margin-bottom: 0;
+
+    @media #{$above-sm} {
+      float: right;
+      margin-top: 0;
+    }
+  }
+}
+
+[am-stream~="ie10"] {
+  background-color: map-get($color, "black");
+}
+
+[am-stream~="chat"] {
+  [am-button] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

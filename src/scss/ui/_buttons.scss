@@ -1,0 +1,284 @@
+// Button styles
+[am-button] {
+  display: inline-block;
+  font-size: cRem(19);
+  line-height: cRem(26);
+  font-weight: 400;
+  cursor: pointer;
+  padding: cRem(18);
+  margin-top: cRem(10);
+  @include animate(0.3s, 0s);
+
+  [am-icon] {
+    transition: fill .3s ease;
+
+    &[am-icon~="basket"] {
+      height: 24px;
+      width: 32px;
+      margin-top: 2px;
+    }
+  }
+
+  @media #{$above-sm} {
+    font-size: cRem(21);
+    line-height: cRem(29);
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(22);
+    line-height: cRem(33);
+  }
+
+  &[am-button~="allcaps"] {
+    text-transform: uppercase;
+  }
+
+  &[am-button~="skinny"] {
+    padding-top: cRem(10);
+    padding-bottom: cRem(10);
+
+    [am-icon] {
+      height: cRem(27);
+      margin-top: cRem(-8);
+      margin-left: cRem(8);
+    }
+  }
+
+  &[am-button~="yellow"] {
+    background-color: map-get($color, "yellow");
+    color: map-get($color, "black");
+
+    &:hover {
+      @media #{$above-sm} {
+        background-color: darken(map-get($color, "yellow"), 10%)
+      }
+    }
+  }
+
+  &[am-button~="navy"] {
+    background-color: map-get($color, "black");
+    color: map-get($color, "light-blue");
+
+    &:hover {
+      @media #{$above-sm} {
+        background-color: map-get($color, "white");
+        color: map-get($color, "navy");
+
+        [am-icon] {
+          g {
+            fill: map-get($color, "navy");
+          }
+        }
+      }
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &[am-button~="white"] {
+    background-color: map-get($color, "white");
+    color: map-get($color, "black");
+
+    &:hover{
+      @media #{$above-sm} {
+        background-color: darken(map-get($color, "white"), 15%);
+      }
+    }
+  }
+
+  &[am-button~="white-border"] {
+    border: 2px solid map-get($color, "white");
+    color: map-get($color, "white");
+
+    &:hover {
+      @media #{$above-sm} {
+        color: map-get($color, "navy");
+        background-color: map-get($color, "white")
+      }
+    }
+
+    &.active {
+      color: map-get($color, "navy");
+      background-color: map-get($color, "white");
+    }
+  }
+
+  &[am-button~="ghost"] {
+    background-color: transparent;
+    color: map-get($color, "white");
+    border: solid 2px map-get($color, "white");
+  }
+
+  &[am-button~="search"] {
+    background-color: transparent;
+    color: map-get($color, "white");
+  }
+
+  &[am-button~="buy-now"] {
+    background-color: map-get($color, "brand-primary");
+    margin-left: cRem(5);
+
+    @media #{$above-md} {
+      margin-left: cRem(10)
+    }
+
+    &:hover {
+      @media #{$above-sm} {
+        background-color: map-get($color, "white");
+        color: map-get($color, "black");
+
+        svg {
+          g {
+            fill: map-get($color, "black");
+          }
+        }
+      }
+    }
+  }
+
+  &[am-button~="chat-now"] {
+    background-color: map-get($color, "white");
+    color: map-get($color, "black");
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+
+    @media #{$above-sm} {
+      margin-left: cRem(5);
+      width: auto;
+      margin-top: 0;
+    }
+
+    @media #{$above-md} {
+      margin-left: cRem(10);
+    }
+
+    &:hover {
+      @media #{$above-sm} {
+        background-color: map-get($color, "brand-primary");
+        color: map-get($color, "white");
+      }
+    }
+  }
+
+  &[am-button~="home-stream"] {
+    [am-icon] {
+      margin-top: -4px;
+      margin-right: 4px;
+    }
+
+    &:hover {
+      opacity:0.85;
+    }
+  }
+
+  &[am-button~="dark"] {
+    background-color: map-get($color, "dark");
+    color: map-get($color, "white");
+
+    &:hover {
+      @media #{$above-sm} {
+        background-color: map-get($color, "white");
+        color: map-get($color, "navy");
+
+        p {
+          color: map-get($color, "navy");
+        }
+
+        [am-icon] {
+          path {
+            fill: map-get($color, "navy");
+          }
+        }
+      }
+    }
+
+    &.active {
+      background-color: map-get($color, "brand-primary");
+
+      &:hover {
+        @media #{$above-sm} {
+          background-color: map-get($color, "white");
+        }
+      }
+    }
+  }
+
+  &[am-button~="brand-primary"] {
+    background-color: map-get($color, "brand-primary");
+    color: map-get($color, "white");
+
+    &:hover {
+      @media #{$above-sm} {
+        background-color: map-get($color, "white");
+        color: map-get($color, "navy");
+
+        [am-icon] {
+          g {
+            fill: map-get($color, "navy");
+          }
+        }
+      }
+    }
+  }
+
+  &[am-button~="full"] {
+    display: block;
+    width: 100%;
+  }
+
+  &[am-button~="center"] {
+    text-align:center;
+
+    @media #{$above-xs} {
+      span,
+      [am-icon] {
+        float: none;
+      }
+    }
+  }
+
+  &[am-button~="long"] {
+    width: 370px;
+
+    [am-icon] {
+      height: 29px;
+      width: 29px;
+
+      + [am-icon] {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &[am-button~="icon"] {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  &[am-button~="icon-right"] {
+    svg {
+      float: right;
+    }
+  }
+
+  &[am-button~="icon-left"] {
+    svg {
+      float: left;
+    }
+  }
+
+  [am-icon] {
+    height: 29px;
+    width: 29px;
+  }
+
+  &::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}

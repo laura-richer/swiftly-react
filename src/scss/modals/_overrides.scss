@@ -1,0 +1,62 @@
+// Positioning and spacing
+[am-container~="modal"] {
+  width: 100%;
+  max-width: 420px;
+  padding-bottom: cRem(20);
+
+  @media #{$above-sm} {
+    max-width: 1300px;
+  }
+
+  [am-title] {
+    padding-bottom: 0;
+  }
+
+  // Typography
+  h1 {
+    font-size: cRem(30);
+    line-height: cRem(30);
+  }
+
+  [am-font~="2"] {
+    font-size: cRem(21);
+  }
+
+  p {
+    font-size: cRem(13);
+    line-height: cRem(21);
+  }
+
+  [am-arrow] {
+    border-width: 1px;
+
+    &:after {
+      border-width: 1px;
+    }
+  }
+}
+
+[am-full-width] {
+  width: 100%;
+}
+
+[am-back-btn] {
+  font-weight: 100;
+  text-transform: uppercase;
+  padding-bottom: cRem(20);
+
+  &[am-back-btn~="live-stream"] {
+    padding-bottom: 0;
+  }
+
+  [am-button] {
+    font-size: cRem(16);
+    line-height: cRem(16);
+    padding: 0.5rem;
+    margin-top: 0;
+  }
+}
+
+.mleft {
+  margin-left: 5px !important;
+}

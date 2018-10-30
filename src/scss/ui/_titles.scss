@@ -1,0 +1,42 @@
+//Section titles
+[am-title] {
+  padding-bottom: 1rem;
+
+  @media #{$above-xs} {
+    padding-bottom: cRem(30);
+  }
+}
+
+[am-title~="section"] {
+  margin-bottom: cRem(15);
+  padding: cRem(7) cRem(20) cRem(12);
+  font-size: cRem(22);
+  line-height: cRem(26);
+}
+
+[am-title~="calendar"] {
+  padding: cRem(4) 0 cRem(0);
+  font-size: cRem(24);
+  font-weight: 400;
+  line-height: cRem(38);
+  vertical-align: middle;
+  font-weight: 200;
+
+  @media #{$above-xl} {
+    font-size: cRem(32);
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(27);
+    line-height: cRem(26);
+  }
+
+  @media #{$above-sm} {
+    border-bottom: 1px solid map-get($color, "middle-grey");
+    padding: cRem(4) 0 cRem(8);
+  }
+
+  &.first {
+    font-weight: 600;
+  }
+}

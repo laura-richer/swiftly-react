@@ -1,0 +1,63 @@
+// Config
+@import "config";
+
+@import "./node_modules/bourbon/core/bourbon",
+        "./node_modules/bolser-am-strap/all";
+
+
+// Mixins
+@import "global/mixins";
+
+// Global
+@import "global/normalize",
+        "global/accessibility",
+        "global/colors",
+        "global/helpers",
+        "global/icons",
+        "global/page",
+        "global/typography", // Need to get custom fonts working in react
+        "global/ie11-overrides";
+
+// Modules
+@import "modules/autocomplete",
+        "modules/calendar",
+        "modules/carousel", // BG image in here that dosnt compile in react NEEDS FIXING
+        "modules/datepicker",
+        "modules/search-bar",
+        "modules/tabs",
+        "modules/tiles";
+
+// UI
+@import "ui/animate",
+        "ui/arrows",
+        "ui/buttons",
+        "ui/footer",
+        "ui/game-details",
+        "ui/header",
+        "ui/live-stream",
+        "ui/messages",
+        "ui/nav",
+        "ui/placeload",
+        "ui/stream-stats",
+        "ui/titles";
+
+// Pages
+@import "pages/home/home",
+        "pages/404/404",
+        "pages/stream/stream",
+        "pages/stream/upcoming",
+        "pages/search/search",
+        "pages/video/video",
+        "pages/profiles/profiles";
+
+@import "components/game-info/footer",
+        "components/game-info/age-rating",
+        "components/embed/embed",
+        "components/header/header-modal";
+
+// Modals
+@import "modals/overrides",
+        "modals/live-stream",
+        "modals/calendar",
+        // make sure this comes last
+        "modals/light/light-overrides";

@@ -1,0 +1,226 @@
+// Fonts
+// --------------------------------
+// @font-face {
+//   font-family: "SegoeUI";
+//   src:  local("Segoe UI Light"),
+//         local("Segoe UI"),
+//         url("../fonts/segoe-ui/west-european/light/latest.woff2") format("woff2"),
+//         url("../fonts/segoe-ui/west-european/light/latest.woff") format("woff"),
+//         url("../fonts/segoe-ui/west-european/light/latest.ttf") format("truetype"),
+//         url("../fonts/segoe-ui/west-european/light/latest.svg#web") format("svg");
+//   font-weight: 100;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "SegoeUI";
+//   src:  local("Segoe UI Semilight"),
+//         local("Segoe UI"),
+//         url("../fonts/segoe-ui/west-european/semilight/latest.woff2") format("woff2"),
+//         url("../fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"),
+//         url("../fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype"),
+//         url("../fonts/segoe-ui/west-european/semilight/latest.svg#web") format("svg");
+//   font-weight: 200;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "SegoeUI";
+//   src:  local("Segoe UI"),
+//         url("../fonts/segoe-ui/west-european/normal/latest.woff2") format("woff2"),
+//         url("../fonts/segoe-ui/west-european/normal/latest.woff") format("woff"),
+//         url("../fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"),
+//         url("../fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "SegoeUI";
+//   src:  local("Segoe UI Semibold"),
+//         url("../fonts/segoe-ui/west-european/semibold/latest.woff2") format("woff2"),
+//         url("../fonts/segoe-ui/west-european/semibold/latest.woff") format("woff"),
+//         url("../fonts/segoe-ui/west-european/semibold/latest.ttf") format("truetype"),
+//         url("../fonts/segoe-ui/west-european/semibold/latest.svg#web") format("svg");
+//   font-weight: 600;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "SegoeUI";
+//   src:  local("Segoe UI Bold"),
+//         local("Segoe UI"),
+//         url("../fonts/segoe-ui/west-european/bold/latest.woff2") format("woff2"),
+//         url("../fonts/segoe-ui/west-european/bold/latest.woff") format("woff"),
+//         url("../fonts/segoe-ui/west-european/bold/latest.ttf") format("truetype"),
+//         url("../fonts/segoe-ui/west-european/bold/latest.svg#web") format("svg");
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// General
+// --------------------------------
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 20px;
+  font-family: "SegoeUI", Arial, Sans Serif;
+}
+
+// Headers
+// --------------------------------
+h1,
+[am-font~="1"] {
+  font-size: cRem(30);
+  line-height: cRem(51);
+  font-weight: 400;
+  margin-top: 0;
+
+  @media #{$above-sm} {
+    font-size: cRem(40);
+    line-height: cRem(54);
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(60);
+    line-height: cRem(41);
+  }
+}
+
+h2,
+[am-font~="2"] {
+  font-size: cRem(26);
+  line-height: cRem(34);
+  font-weight: 100;
+
+  @media #{$above-sm} {
+    font-size: cRem(32);
+    line-height: cRem(40);
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(42);
+    line-height: cRem(57);
+  }
+}
+
+[am-title] {
+  font-size: cRem(26);
+
+  @media #{$above-sm} {
+    font-size: cRem(42);
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+h3,
+[am-font~="3"] {
+  font-size: cRem(20);
+  line-height: cRem(27);
+  font-weight: 600;
+
+  @media #{$above-sm} {
+    font-size: cRem(24);
+    line-height: cRem(33);
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(28);
+    line-height: cRem(38);
+  }
+}
+
+h4,
+[am-font~="4"] {
+  font-size: cRem(16);
+  line-height: cRem(20);
+  font-weight: 200;
+
+  @media #{$above-sm} {
+    font-size: cRem(16);
+    line-height: cRem(20);
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(28);
+    line-height: cRem(28);
+  }
+}
+
+h5,
+[am-font~="5"] {
+  font-size: cRem(16);
+  line-height: cRem(16);
+  font-weight: 200;
+
+  @media #{$above-lg} {
+    font-size: cRem(20);
+    line-height: cRem(20);
+  }
+}
+
+
+// Other Elements
+// --------------------------------
+p {
+  font-size: cRem(16);
+  line-height: cRem(22);
+  font-weight: 400;
+
+  @media #{$above-sm} {
+    font-size: cRem(14);
+    line-height: cRem(22);
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(16);
+    line-height: cRem(22);
+  }
+}
+
+ul {
+  li {
+    font-size: cRem(18);
+    line-height: cRem(24);
+
+    @media #{$above-sm} {
+      font-size: cRem(21);
+      line-height: cRem(33);
+    }
+
+    @media #{$above-lg} {
+      font-size: cRem(28);
+    }
+  }
+}
+
+small {
+  font-size: cRem(28);
+  line-height: cRem(38);
+
+  @media #{$above-sm} {
+    font-size: cRem(36);
+    line-height: cRem(48);
+  }
+}
+
+// Links
+// --------------------------------
+a {
+  color: map-get($color, "white")
+}
+
+// Strong
+// --------------------------------
+strong,
+[am-strong] {
+  // change to correct weight once fonts are added correctly
+  font-weight: 700;
+}

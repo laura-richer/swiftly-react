@@ -1,0 +1,84 @@
+// Search bar styles
+
+[ui-view~="search-bar"] {
+  padding: cRem(25) 0;
+}
+
+[am-search~="search-bar"] {
+  @media #{$above-md} {
+    margin-top: cRem(50);
+  }
+
+  input,
+  button {
+    display: inline-block;
+    float: left;
+  }
+
+  [am-button] {
+    padding-left:cRem(5);
+    padding-right: cRem(5);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media #{$above-xs} {
+      padding-top: cRem(5);
+      padding-bottom: cRem(5);
+    }
+
+    @media #{$above-md} {
+      padding-top: cRem(16);
+      padding-bottom: cRem(16);
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    svg {
+      @media #{$below-md} {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  input {
+    color: map-get($color, "white");
+    background-color: transparent;
+    width: 78%;
+    margin-left: cRem(7);
+    position: relative;
+    font-size: cRem(20);
+    line-height: cRem(28);
+    font-weight: 600;
+
+    @media #{$above-sm} {
+      width: 89%;
+      font-size: cRem(22);
+    }
+
+    @media #{$above-md} {
+      width: 85%;
+      font-size: cRem(28);
+      line-height: cRem(40);
+      padding-top: cRem(8);
+      padding-bottom: cRem(8);
+    }
+
+    @media #{$above-lg} {
+      width: 88%;
+    }
+
+    &::placeholder {
+      font-weight: 200;
+      opacity: .5;
+    }
+  }
+}
+
+[am-search~="no-results"] {
+  border-bottom: 1px solid map-get($color, "middle-grey");
+  padding-top: cRem(24);
+  padding-bottom: cRem(24);
+}

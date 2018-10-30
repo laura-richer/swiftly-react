@@ -1,0 +1,81 @@
+// Header Block
+header {
+  padding: cRem(35) 0 0;
+
+  @media #{$above-sm} {
+    padding: cRem(55) 0 0;
+  }
+
+  @media #{$above-lg} {
+    padding: cRem(75) 0 0;
+  }
+
+  [am-title] {
+    padding-bottom: 0;
+    font-weight: 100;
+
+    a {
+      opacity: 1;
+      transition: opacity 0.2s ease 0s, opacity 0.2s ease 0s;
+
+      &:hover {
+        @media #{$above-sm} {
+          opacity: .5;
+        }
+      }
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  [am-row~="header-block"] {
+    margin-bottom: 0;
+
+    @media #{$above-lg} {
+      margin-bottom: cRem(20);
+    }
+
+    [am-float~="left"],
+    [am-float~="right"] {
+      @media #{$below-sm} {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    h4 {
+      padding-left: cRem(15);
+      margin-top: cRem(6);
+
+      &[am-title~="signed-in"] {
+        height: 45px;
+        margin-top: 0;
+        vertical-align: middle;
+
+        @media #{$above-sm} {
+          font-size: cRem(20);
+          line-height: cRem(24);
+          height: 55px;
+        }
+
+        @media #{$above-lg} {
+          height: 70px;
+        }
+      }
+    }
+
+    [am-icon~="arrow-right"] {
+      margin-left: cRem(50);
+
+      @media #{$below-lg} {
+        margin-left: cRem(20);
+      }
+    }
+  }
+}
+
+[am-container-wrapper~="modal-header"] {
+  padding-top: 20px;
+}

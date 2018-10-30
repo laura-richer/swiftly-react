@@ -1,0 +1,43 @@
+// Tabs
+
+[am-tabs] {
+  border: 2px solid map-get($color, "white");
+  margin-bottom: 1rem;
+
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+
+  a {
+    display: block;
+    padding: cRem(10) 0;
+    width: 50%;
+    float: left;
+
+    &:first-child {
+      box-shadow: 2px 0px 0px 0px map-get($color, "white");
+    }
+
+    &.active {
+      background: map-get($color, "white");
+      color: map-get($color, "navy");
+
+      svg,
+      g {
+        fill: map-get($color, "navy") !important;
+      }
+    }
+
+    [am-icon] {
+      height: 31px;
+    }
+
+    span {
+      @media #{$below-sm} {
+        display: none;
+      }
+    }
+  }
+}

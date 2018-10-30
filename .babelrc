@@ -1,0 +1,18 @@
+{
+  "presets": [
+    ["next/babel", {
+      "preset-env": {
+        "targets": {
+          "browsers": [
+            "Chrome >= 49",
+            "Safari >= 9.2",
+            "iOS >= 9.3",
+            "Firefox >= 52",
+            "Edge >= 15",
+            "IE >= 11"
+          ]
+        }
+      }
+    }]
+  ]
+}

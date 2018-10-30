@@ -1,0 +1,325 @@
+// Calendar navigation
+[am-section~="calendar-navigation"] {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-bottom: cRem(30);
+  padding-bottom: 0;
+  position: relative;
+
+  @media #{$above-sm} {
+    margin-bottom: cRem(35);
+  }
+
+  [am-calendar~="pagination"] {
+    position: absolute;
+    right: 0;
+    margin-top: 0;
+    top: 70px;
+    z-index: 30;
+
+    @media #{$above-sm} {
+      margin-top: cRem(4);
+      position: static;
+    }
+
+    @media #{$above-lg} {
+      margin-top: cRem(12);
+    }
+
+    [am-arrow] {
+      width: cRem(35);
+      height: cRem(35);
+      top: cRem(2); 
+    }
+  }  
+
+  h2 {
+    font-size: cRem(24);
+
+    @media #{$above-sm} {
+      font-size: cRem(28);
+    }
+
+    @media #{$above-lg} {
+      font-size: cRem(38);
+    }
+
+    [am-icon] {
+      margin-left: cRem(3);
+      margin-top: -5px;
+      width: cRem(35);
+      height: cRem(35);
+    }
+  }
+}
+
+// No Streams Calendar layout
+[am-section~="calendar-no-streams"] {
+  [am-row] {
+    [am-col] {
+      padding: cRem(150) cRem(20);
+      text-align: center;
+
+      p {
+        font-size: cRem(22);
+      }
+
+      [am-button] {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+// Calendar layout
+[am-section~="calendar"] {
+  margin-bottom: 10%;
+  [am-row] {
+    margin: 0 -.5rem;
+
+    @media #{$above-sm} {
+      margin: 0 -.25rem;
+    }
+  }
+  
+  [am-col] {
+
+    @media #{$above-sm} {
+      padding: 0 cRem(8);
+    }
+
+    &[am-col~="lg-2"] {
+      @media #{$above-lg} {
+        width: 20%;
+      }
+    }
+  }
+
+  [am-tile~="container"] {
+    [am-tile~="rollover"] {
+      @media #{$below-md} {
+        top: 106%;
+      }
+    }
+  }
+
+  [am-calendar~="placeholder"] {    
+    @media #{$above-md} {
+      height: 460px;
+    }
+
+    @media #{$above-lg} {
+      height: 366px;
+    }
+
+    @media #{$above-xl} {
+      height: 448px;
+    }
+  }
+
+  [am-count~="stream-0"] {
+    [am-tile~="container"] {
+      background-color: map-get($color, "black");
+      padding-top: 116%;
+
+      p {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
+        font-size: cRem(24);
+        line-height: cRem(38);
+        font-weight: 200;
+        opacity: 0.7;
+        padding: 0 10px;
+
+        @media #{$above-lg} {
+          font-size: cRem(20);
+        }
+
+        @media #{$above-xl} {
+          font-size: cRem(24);
+        }
+      }
+    }
+  }
+
+  [am-count~="stream-2"] {
+
+    [am-calendar-tile~="calendar-link"] {
+      margin-bottom: cRem(20);
+    }
+
+    [am-calendar-tile~="hover"] {
+      [am-icon] {
+        height: cRem(70);
+
+        @media #{$above-sm} {
+          height: cRem(50);
+        }
+
+        @media #{$above-md} {
+          height: cRem(70);
+        }
+
+        @media #{$above-lg} {
+          height: cRem(50);
+        }
+
+        @media #{$above-xl} {
+          height: cRem(70);
+        }
+      }
+    }
+
+    [am-calendar-tile="game-bg"] {
+      padding-top: 36.3%;
+
+      @media #{$above-xs} {
+        padding-top: 31.3%;
+      }
+
+      @media #{$above-sm} {
+        padding-top: 31.3%;
+      }
+
+      @media #{$above-md} {
+        padding-top: 37.3%;
+      }
+
+      @media #{$above-lg} {
+        padding-top: 29.7%;
+      }
+
+      @media #{$above-xl} {
+        padding-top: 36.8%;
+      }
+    }
+  }
+
+  [am-calendar~="tiles-container"] {
+    margin-top: cRem(45);
+  }
+}
+
+[am-calendar~="col"] {
+  &:nth-child(n+2) {
+    [am-calendar~="placeholder"] {
+      margin-top: cRem(72);
+
+      @media #{$above-sm} {
+        margin-top: cRem(77);
+      }
+
+      @media #{$above-lg} {
+        margin-top: cRem(100);
+      }
+    }
+
+    [am-calendar~="gamemasters"] {
+      margin-top: cRem(92);
+
+      @media #{$above-sm} {
+        margin-top: cRem(97);
+      }
+
+      @media #{$above-lg} {
+        margin-top: cRem(120);
+      }      
+    }
+  }
+  &:first-child {
+    h4 {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  &:last-child {
+    h4 {
+      margin-right: 0;
+    }
+  }
+
+  h4 {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding-left: 1rem;
+    margin-bottom: 0;
+    font-weight: 100;
+
+    @media #{$above-sm} {
+      padding-bottom: cRem(20);
+    }
+
+    @media #{$above-lg} {
+      padding-bottom: cRem(40);
+    }
+  }
+}
+
+[am-calendar~="stream-title"] {
+  font-size: cRem(20);
+  font-weight: 200;
+  margin-right: 0;
+  margin-top: 40px;
+  margin-bottom: 5px;
+
+  @media #{$above-sm} {
+    margin-bottom: 10px;
+  }
+
+  @media #{$above-lg} {
+    font-size: cRem(26);
+    margin-bottom: 25px;
+  }
+
+  &[am-calendar~="retailer"] {
+    margin-top: cRem(60);
+  }
+}
+
+[am-col~="calendar-override"] {
+  padding: 0 1rem !important;
+  width: 100%;
+  margin-top: 110px;
+  @media #{$above-md} {
+    margin-top: 0;
+    width: 33.33333%;
+  }
+
+  @media #{$above-lg} {
+    width: 20%;
+  }
+}
+
+
+[am-calendar~="xbox-streams"],
+[am-calendar~="retailer-streams"] {
+  [am-count~="stream-0"] {
+    [am-tile~="container"] {
+      p {
+        font-size: cRem(14);
+        line-height: cRem(24);
+
+        @media #{$above-xs} {
+          font-size: cRem(20);
+          line-height: cRem(30);
+        }
+
+        @media #{$above-sm} {
+          font-size: cRem(14);
+          line-height: cRem(24);
+        }
+
+        @media #{$above-md} {
+          font-size: cRem(19);
+          line-height: cRem(29);
+        }
+      }
+    }
+  }
+}

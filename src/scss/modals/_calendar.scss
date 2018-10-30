@@ -1,0 +1,236 @@
+// Calendar modal overrides
+[am-container~="modal"] {
+  [am-section="calendarmodal-header"] {
+    padding-bottom: 0;
+  }
+
+  // No streams
+  [am-section~="calendar-no-streams"] {
+    [am-row] {
+      [am-col] {
+        padding: cRem(134) cRem(20);
+
+        p {
+          font-size: cRem(16);
+        }
+
+        [am-button] {
+          margin-top: cRem(15);
+        }
+      }
+    }
+  }
+
+  [am-section~="calendar"] {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    [am-row] {
+      margin: 0 -.5rem;
+
+      @media #{$above-sm} {
+        margin: 0 -.25rem;
+      }
+
+    }
+
+    [am-row~="bottom-margin"] {
+      margin-bottom: cRem(20);
+    }
+
+    [am-col] {
+      padding: 0 cRem(8);
+
+      @media #{$above-sm} {
+        width: 20%;
+      }
+    }
+
+    [am-calendar~="placeholder"] {
+      @media #{$above-md} {
+        height: 330px;
+      }
+    }
+  }
+
+  [am-section~="calendar-navigation"] {
+    margin-bottom: cRem(10);
+
+    h2 {
+      font-size: cRem(21);
+
+      [am-icon] {
+        width: cRem(20);
+        height: cRem(20);
+      }
+    }
+  }
+
+  nav[am-calendar~="pagination"] {
+    @media #{$below-sm} {
+      top: 4px;
+      margin-top: cRem(30);
+      text-align: center;
+
+      a[am-arrow] {
+        height: cRem(34);
+        width: cRem(34);
+        border-width: 2px;
+
+        &:after {
+          border-width: 2px;
+        }
+      }
+    }
+
+    [am-arrow] {
+      width: cRem(25);
+      height: cRem(25);
+
+      + [am-arrow] {
+        margin-left: 0;
+      }
+    }
+  }
+
+  [am-title~="calendar"] {
+    font-size: cRem(17);
+    line-height: cRem(17);
+    padding-bottom: cRem(8);
+    border-bottom: 0;
+  }
+
+  [am-calendar-tile~="calendar-link"] {
+
+    [am-calendar-link~="mobile-trigger"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      @media #{$above-sm} {
+        display: none;
+      }
+    }
+
+    [am-calendar-tile-state] {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    [am-calendar-tile-state="initialState"],
+    [am-calendar-tile-state="calendarState"] {
+      visibility: hidden;
+
+      &:hover {
+        [am-calendar-link] {
+          @media #{$above-sm} {
+            opacity: .5;
+          }
+        }
+      }
+
+      [am-calendar-link] {
+        display: inline-block;
+        pointer-events: all;
+        visibility: visible;
+
+        [am-icon] {
+          pointer-events: none;
+        }
+
+        &:hover {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    [am-calendar-tile~="hover"] {
+      [am-icon] {
+        height: cRem(40);
+        width: cRem(60);
+
+        @media #{$above-md} {
+          height: cRem(50);
+          width: cRem(70);
+        }
+        @media #{$above-lg} {
+          height: cRem(50);
+          width: cRem(80);
+        }
+      }
+
+      [am-calendar-link~="close"] {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: cRem(16);
+        height: cRem(16);
+
+        [am-icon] {
+          vertical-align: top;
+          width: cRem(16);
+          height: cRem(16);
+        }
+      }
+    }
+  }
+
+  [am-calendar-tile~="game-desc"] {
+    padding: cRem(10) cRem(10) 0;
+    min-height: 70px;
+
+    p {
+      strong {
+        font-size: cRem(14);
+      }
+      font-size: cRem(11);
+      line-height: cRem(14);
+    }
+
+    [am-game-details~="gamertag"] {
+      h3 {
+        font-size: cRem(11);
+      }
+
+      [am-game-details~="avatar"] {
+        width: cRem(20);
+        height: cRem(20);
+      }
+    }
+  }
+
+  // Override styling for two elements
+  [am-count~="stream-2"] {
+    [am-calendar-tile~="calendar-link"] {
+      position: relative;
+      margin-bottom: .8rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    [am-calendar-tile="game-bg"] {
+      position: static;
+      background-image: none !important;
+      background-color: map-get($color, "dark");
+      padding-top: calc(119% / 2 - 46px);
+    }
+
+    [am-calendar-tile~="hover"] {
+      z-index: 1;
+
+      [am-calendar-link~="close"] {
+        top: .5rem;
+      }
+    }
+  }
+}

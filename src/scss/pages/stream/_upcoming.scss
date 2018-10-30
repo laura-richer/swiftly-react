@@ -1,0 +1,75 @@
+[ui-view~="upcoming-streams"],
+[ui-view~="home-calendar"],
+[am-section~="search"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @media #{$above-xs} {
+    padding-top: cRem(70);
+    padding-bottom: cRem(70);
+  }
+
+  [am-arrow] {
+    @media #{$above-sm} {
+      width: cRem(35);
+      height: cRem(35);
+      top: cRem(2); 
+    }
+  }
+
+  [am-arrow] + [am-arrow] {
+    margin-left: cRem(7);
+  }
+}
+
+[ui-view~="home-calendar"] {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  [am-carousel~="pagination"] {
+    margin-top: cRem(40);
+    @media #{$above-sm} {
+      margin-top: cRem(-50);
+      margin-bottom: cRem(-10);
+    }
+
+    @media #{$above-lg} {
+      margin-top: cRem(-55);
+    }
+  }
+}
+
+nav[am-carousel~="pagination"],
+nav[am-calendar~="pagination"] {
+  margin-bottom: 0;
+
+  @media #{$above-xs} {
+    margin-top: cRem(15);
+    margin-bottom: 0;
+  }
+
+  @media #{$above-sm} {
+    display: block;
+    float: right;
+    margin-top: cRem(-50);
+    position: relative;
+  }
+
+  [am-arrow] {
+    @media #{$above-sm} {
+      width: cRem(35);
+      height: cRem(35);
+      top: cRem(2); 
+    }
+  }
+
+  [am-arrow] + [am-arrow] {
+    margin-left: 0;
+  }
+}
+
+nav[am-calendar~="pagination"] {
+  [am-arrow] + [am-arrow] {
+    margin-left: cRem(6);
+  }
+}

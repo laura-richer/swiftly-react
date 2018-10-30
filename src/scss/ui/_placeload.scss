@@ -1,0 +1,224 @@
+// Animation settings
+$animation-duration: 2.5s;
+
+// Colours
+$placeload-color: #0a0c10;
+$placeload-green-gradient: #107c10;
+$placeload-grey-gradient: #505050;
+$placeload-blue-gradient: #004471;
+
+// Masking
+$start-pos: 100%;
+$line-length-1: calc(100% - 50%);
+$line-length-2: calc(100% - 20%);
+$line-height: 24px;
+$spacer-height: 10px;
+$max-height: 880px;
+
+// Shimmer effect
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -400px 0;
+  }
+
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+// Gradient effect
+@mixin loader-gradient($gradient-color) {
+  background: $placeload-color linear-gradient(to right, lighten($gradient-color, 0%) 8%, lighten($gradient-color, 2%) 10%, lighten($gradient-color, 10%) 18%);
+}
+
+.timeline-item {
+  background: $placeload-color;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+.animated-background {
+  animation-duration: $animation-duration;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-size: 300px 104px;
+  height: 100%;
+  position: relative;
+
+  &.green {
+    @include loader-gradient($placeload-green-gradient);
+  }
+
+  &.grey {
+    @include loader-gradient($placeload-grey-gradient);
+  }
+
+  &.blue {
+    @include loader-gradient($placeload-blue-gradient);
+  }
+}
+
+.background-masker {
+  background: $placeload-color;
+  position: absolute;
+
+  &.xbox-top-spacer { // top spacer
+    height: $max-height;
+    left: 0;
+    right: 0;
+    top: calc(#{'#{$start-pos} - #{$line-height * 2} - #{$max-height +- 10px}'});
+
+    @media #{$below-lg} {
+      height: ($max-height + 200);
+      top: calc(#{'#{$start-pos} - #{$line-height * 2} - #{$max-height + 200 - 10px}'});
+    }
+  }
+
+  &.xbox-top-line-padding { // top line padding
+    height: $line-height;
+    left: $line-length-2;
+    right: 0;
+    top: calc(#{'#{$start-pos} - #{$line-height * 2}'});
+  }
+
+  &.xbox-bottom-spacer { // bottom spacer
+    height: $spacer-height;
+    left: 0;
+    right: 0;
+    top: calc(#{'#{$start-pos} - #{$line-height}'});
+  }
+
+  &.xbox-bottom-line-padding { // bottom line padding
+    height: $line-height;
+    left: $line-length-1;
+    right: 0;
+    top: calc(#{'#{$start-pos} - #{$line-height} + 1px'});
+  }
+
+  // Everything below this is just positioning
+  &.header-top,
+  &.header-bottom,
+  &.subheader-bottom {
+    height: 10px;
+    left: 40px;
+    right: 0;
+    top: 0;
+  }
+
+  &.header-left,
+  &.subheader-left,
+  &.header-right,
+  &.subheader-right {
+    height: 8px;
+    left: 40px;
+    top: 10px;
+    width: 10px;
+  }
+
+  &.header-bottom {
+    height: 6px;
+    top: 18px;
+  }
+
+  &.subheader-left,
+  &.subheader-right {
+    height: 6px;
+    top: 24px;
+  }
+
+
+  &.header-right,
+  &.subheader-right {
+    left: 300px;
+    right: 0;
+    width: auto;
+  }
+
+  &.subheader-right {
+    left: 230px;
+  }
+
+  &.subheader-bottom {
+    height: 10px;
+    top: 30px;
+  }
+
+  &.content-top,
+  &.content-second-line,
+  &.content-third-line,
+  &.content-second-end,
+  &.content-third-end,
+  &.content-first-end {
+    height: 6px;
+    left: 0;
+    right: 0;
+    top: 40px;
+  }
+
+  &.content-top {
+    height: 20px;
+  }
+
+  &.content-first-end,
+  &.content-second-end,
+  &.content-third-end {
+    height: 8px;
+    left: 380px;
+    right: 0;
+    top: 60px;
+    width: auto;
+  }
+
+  &.content-second-line  {
+    top: 68px;
+  }
+
+  &.content-second-end {
+    left: 420px;
+    top: 74px;
+  }
+
+  &.content-third-line {
+    top: 82px;
+  }
+
+  &.content-third-end {
+    left: 300px;
+    top: 88px;
+  }
+}
+
+// Reverse placeholder lines override
+
+.reversed {
+  .xbox-top-spacer,
+  .xbox-top-line-padding,
+  .xbox-bottom-spacer,
+  .xbox-bottom-line-padding {
+    top: inherit;
+  }
+
+  .xbox-top-spacer {
+    bottom: calc(#{'#{$start-pos} - #{$line-height * 2} - #{$max-height +- 10px}'});
+
+    @media #{$below-lg} {
+      bottom: calc(#{'#{$start-pos} - #{$line-height * 2} - #{$max-height + 200 - 10px}'});
+    }
+  }
+
+  .xbox-top-line-padding {
+    bottom: calc(#{'#{$start-pos} - #{$line-height * 2}'});
+  }
+
+  .xbox-bottom-spacer {
+    bottom: calc(#{'#{$start-pos} - #{$line-height}'});
+  }
+
+  .xbox-bottom-line-padding {
+    bottom: calc(#{'#{$start-pos} - #{$line-height} - 15px'});
+  }
+}

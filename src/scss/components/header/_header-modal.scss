@@ -1,0 +1,52 @@
+@import '../../config';
+@import '../../global/mixins';
+
+[am-poweredby~="modal"] {
+  border-bottom: 0;
+  float: left;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  width: auto;
+  margin-top: cRem(5);
+
+  span {
+    font-size: cRem(14);
+    float: left;
+    @media screen and (max-width: 365px) {
+      font-size: cRem(12);
+    }
+  }
+
+  [am-icon] {
+    width: cRem(75);
+    float: left;
+    top: -.25rem;
+  }
+}
+
+[am-launchexperience~="modal"] {
+  font-size: cRem(14);
+  margin-top: cRem(5);
+  float: right;
+
+  @media screen and (max-width: 365px) {
+    font-size: cRem(12);
+    margin-top: cRem(8);
+  }
+
+  a {
+    &:hover {
+      color: map-get($color, "brand-primary");
+    }
+
+    span,
+    img {
+      display: block;
+      float: left;
+    }
+
+    span {
+      padding-right: 10px;
+    }
+  }
+}

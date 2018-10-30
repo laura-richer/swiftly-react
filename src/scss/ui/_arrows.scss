@@ -1,0 +1,113 @@
+// Button
+// --------------------------------
+
+[am-arrow] {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 2px solid map-get($color, "white");
+  border-radius: 50%;
+  overflow: visible;
+  opacity: 1;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  // Disabled
+  &[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  // Arrow
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 35%;
+    left: 31%;
+    width: 30%;
+    height: 30%;
+    border: 2px solid map-get($color, "white");
+    border-bottom: none;
+    border-left: none;
+    border-top-right-radius: 1px;
+    transform: rotate(45deg) perspective(999px);
+    transform-origin: 50% 50%;
+  }
+}
+
+[am-icon~="arrow-left"],
+[am-icon~="arrow-right"] {
+  // Disabled
+  &[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+
+// Size variations
+// --------------------------------
+
+[am-arrow~="md"] {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid map-get($color, "white");
+
+  &::after {
+    border-width: 2px;
+  }
+}
+
+[am-arrow~="sm"] {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid map-get($color, "white");
+
+  &::after {
+    border-width: 2px;
+  }
+}
+
+
+// Hover pulse
+// --------------------------------
+
+@media #{$above-lg} {
+  a[am-arrow~="anim"]:hover::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+    opacity: 0;
+    border: 1px solid map-get($color, "white");
+    border-radius: 50%;
+    animation: pulseOut 1250ms ease 0ms infinite backwards;
+  }
+}
+
+
+// Arrow direction
+// --------------------------------
+
+[am-arrow~="top"] {
+  transform: rotate(-90deg) perspective(999px);
+}
+
+[am-arrow~="right"] {
+  transform: rotate(0deg) perspective(999px);
+}
+
+[am-arrow~="bottom"] {
+  transform: rotate(90deg) perspective(999px);
+}
+
+[am-arrow~="left"] {
+  transform: rotate(180deg) perspective(999px);
+}

@@ -1,0 +1,171 @@
+[am-title~="profiles"] {
+
+  [am-font~="2"] {
+    display: inline;
+    max-width: 100%;
+
+    @media #{$below-sm} {
+      line-height: cRem(34);
+    }
+
+    @media #{$above-xs} {
+      float: left;
+      max-width: 60%;
+    }
+
+    @media #{$above-lg} {
+      line-height: cRem(55);
+      max-width: 60%;
+    }
+
+    @media #{$above-xl} {
+      max-width: 70%;  
+    }
+  }
+
+  nav {
+    display: block;
+    float: right;
+    top: 0;
+    position: relative;
+  
+    @media #{$above-md} {
+      display: inline-block;
+      top: 0;
+    }
+  }
+
+  [am-arrow] {
+    width: cRem(25);
+    height: cRem(25);
+    top: cRem(2);
+
+    @media #{$above-sm} {
+      width: cRem(30);
+      height: cRem(30);
+      top: cRem(2);
+    }
+
+    @media #{$above-sm} {
+      width: cRem(35);
+      height: cRem(35);
+      top: cRem(2); 
+    }
+  }
+
+  [am-arrow] + [am-arrow] {
+    margin-left: 0;
+  }
+}
+
+[am-profiles~="container"] {
+  margin-top: cRem(45);
+  margin-bottom: cRem(45);
+  display: flex;
+
+  [am-profiles~="child-wrap"] {
+    background-color: map-get($color, "dark");
+    min-height: 100%;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+[am-profiles~="avatar-wrap"] {
+  margin: 0;
+  line-height: 0;
+}
+
+[am-profiles~="info-wrap"] {
+  background-color: map-get($color, "dark");
+  padding: cRem(35);
+
+  > div {
+    padding-bottom: cRem(30);
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: cRem(16);
+      line-height: cRem(22);
+    }
+  }
+
+  h3 {
+    font-size: cRem(32);
+    line-height: cRem(32);
+    font-weight: 200;
+    margin-bottom: cRem(16);
+  }
+
+  h4 {
+    font-size: cRem(14);
+    line-height: cRem(14);
+    font-weight: 700;
+    margin-bottom: cRem(4);
+  }
+
+  [am-profiles~="info-social"] {
+    h5 {
+      font-size: cRem(20);
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    [am-icon] {
+      height: cRem(24);
+      width: cRem(30);
+    }
+
+    [am-icon~="mixer"] {
+      margin-top: -6px;
+    }
+
+    a {
+      margin-left: cRem(5);
+
+      &:last-of-type {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+[am-profiles~="close"] {
+  position: absolute;
+  top: .5rem;
+  right: 1.5rem;
+
+  @media #{$above-sm} {
+    display: none;
+  }
+
+  [am-icon] {
+    height: 20px;
+
+  }
+}
+
+[am-profiles~="popout"] {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: .75rem;
+  transform: translateX(-50%);
+
+  @media #{$above-sm} {
+    top: cRem(40);
+  }
+
+  &.active {
+    display: block;
+  }
+}

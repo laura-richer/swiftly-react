@@ -1,0 +1,31 @@
+// Footer
+
+[ui-view~="footer"] {
+  border-top: 1px solid map-get($color, "middle-grey");
+}
+
+[am-container~="footer"] {
+  text-align: center;
+  padding-bottom: 0;
+
+  @media #{$above-lg} {
+    margin-top: 0;
+  }
+
+  ul {
+    display: inline-block;
+    padding: cRem(20) 0;
+
+    @media #{$above-sm} {
+      padding: cRem(30) 0;
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+      font-size: cRem(14);
+      padding: 0 cRem(15);
+      text-align: center;
+    }
+  }
+}

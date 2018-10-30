@@ -1,0 +1,142 @@
+[am-livestream~="links-container"] {
+  margin-top: 20px;
+
+  a {
+    text-align: center;
+
+    &.hidden {
+      display: none;
+    }
+
+    span {
+      display: inline-block;
+      position: relative;
+    }
+
+    &[am-button~="basket"] {
+      [am-icon~="basket"] {
+        margin-left: 5px;
+        margin-top: -5px;
+      }
+
+      p,
+      svg {
+        display:inline-block;
+      }
+
+      p {
+        float: left;
+        font-size: 19px;
+        line-height: 26px;
+      }
+    }
+
+    @media #{$above-md} {
+      font-size: cRem(16);
+    }
+
+    @media #{$above-lg} {
+      font-size: cRem(21);
+    }
+
+    @media #{$below-lg} {
+      &[am-button~="basket"] {
+        padding-top: 10px;
+      }
+    }
+
+    @media screen and (max-width: 955px) and (min-width: 785px) {
+      width: 55px;
+      height: 55px;
+
+      &[am-button~="basket"] {
+        font-size: cRem(13);
+        padding: 8px 10px;
+      }
+
+      [am-icon~="basket"] {
+        width: 20px !important;
+      }
+    }
+  }
+
+  @media #{$above-sm} {
+    margin-top: 15px;
+
+    a {
+      padding: 0;
+      height: 60px;
+      width: 60px;
+      font-size: cRem(13);
+      margin: 0 0 0 5px;
+
+      span {
+        top: 6px;
+      }
+
+      p {
+        padding-top: 0;
+        line-height: cRem(11);
+        font-size: cRem(8);
+      }
+
+      &[am-button~="basket"] {
+        vertical-align: top;
+        width: auto;
+        padding: 10px 23px;
+
+        [am-icon~="basket"] {
+          margin-left: 5px;
+          margin-top: -5px;
+        }
+
+        p {
+          font-size: cRem(16);
+          vertical-align: middle;
+          line-height: 31px;
+        }
+      }
+    }
+
+    [am-icon] {
+      height: 17px;
+      width: 20px;
+    }
+  }
+
+  @media #{$below-sm} {
+    &[am-livestream~="is-ended"] {
+      [am-button] {
+        width: calc(100% - 50px);
+
+        [am-icon] {
+          margin-top: -5px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    [am-livestream~="buy-now"] {
+      display: inline-block
+    }
+
+    [am-button] {
+      margin-top: 0;
+      margin-left: 0;
+      width: calc(50% - 28px);
+
+      &:first-of-type {
+        margin: 0 5px;
+      }
+
+      &:last-of-type {
+        width: 100%;
+        margin-top: 10px;
+
+        p {
+          padding-top: 2px;
+        }
+      }
+    }
+  }
+}

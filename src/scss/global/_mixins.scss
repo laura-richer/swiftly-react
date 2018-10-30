@@ -1,0 +1,20 @@
+// REM calc function
+@function cRem($size) {
+  $remSize: $size / 20;
+  @return #{$remSize}rem;
+}
+
+//background elements
+@mixin bkg-image($color, $repeat, $position, $size) {
+  background-color: $color;
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin animate($duration, $delay) {
+  -webkit-transition: all $duration ease $delay;         
+  -moz-transition:    all $duration ease $delay;          
+  -o-transition:      all $duration ease $delay;          
+  transition:         all $duration ease $delay;
+}

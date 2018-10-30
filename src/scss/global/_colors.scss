@@ -1,0 +1,112 @@
+// Text colors
+[am-color~="black"] {
+  color: map-get($color, "black");
+}
+
+[am-color~="white"] {
+	color: map-get($color, "white");
+}
+
+[am-color~="brand-primary"] {
+	color: map-get($color, "brand-primary");
+}
+
+[am-color="navy"] {
+  color: map-get($color, "navy");
+}
+
+[am-color="light-blue"] {
+  color: map-get($color, "light-blue");
+}
+
+// Background colours
+[am-bg~="grey"] {
+  background-color: map-get($color, "grey");
+}
+
+[am-bg~="brand-primary"] {
+  background-color: map-get($color, "brand-primary");
+  color: #FFF;
+}
+
+[am-bg~="blue"] {
+  background-color: map-get($color, "blue");
+}
+
+[am-bg~="red"] {
+  background-color: map-get($color, "red");
+}
+
+[am-bg~="black-60"] {
+  background-color: transparentize(map-get($color, "black"), .4);
+}
+
+[am-bg~="white"] {
+  background-color: map-get($color, "white");
+}
+
+[am-bg="navy"] {
+  background-color: map-get($color, "navy");
+}
+
+// SVG Fills
+[am-fill~="black"] {
+  path {
+    fill: map-get($color, "black");
+  }
+}
+
+[am-fill~="white"] {
+  path {
+    fill: map-get($color, "white");
+  }
+}
+
+[am-fill~="brand-primary"] {
+  path {
+    fill: map-get($color, "brand-primary");
+  }
+}
+
+[am-fill="navy"] {
+  path {
+    fill: map-get($color, "navy");
+  }
+}
+
+[am-fill="none"] {
+  path {
+    fill: none;
+  }
+}
+
+// SVG stroke
+[am-stroke~="black"] {
+  path {
+    stroke: map-get($color, "black");
+  }
+}
+
+[am-stroke~="white"] {
+  path {
+    stroke: map-get($color, "white");
+  }
+}
+
+[am-stroke~="brand-primary"] {
+  path {
+    stroke: map-get($color, "brand-primary");
+  }
+}
+
+[am-stroke="navy"] {
+  path {
+    stroke: map-get($color, "navy");
+  }
+}
+
+[am-stroke="none"] {
+  path {
+    stroke: none;
+  }
+}
