@@ -2,23 +2,22 @@ import React, { Component } from 'react';
 
 import App from '../components/App';
 import { Container } from '../components/Container';
-import Questions from '../components/Questions';
+import PlaylistGen from '../components/PlaylistGen';
 
-class Home extends Component {
+class Results extends Component {
   render() {
     return (
       <App>
-
         <Container
           containerName="modal"
           containerWrapper="modal-header"
         >
-          <p>Container Example</p>
-          <Questions />
+          <p>Container</p>
+          <PlaylistGen />
         </Container>
       </App>
     );
   }
 }
 
-export default Home;
+export default Results;
