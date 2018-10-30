@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import Footer from '../Footer';
+import Header from '../Header';
+import Meta from '../Meta';
+
 import '../../src/scss/all.scss';
 
 const propTypes = {
@@ -15,9 +19,13 @@ const App = (props) => {
 
   return (
     <Fragment>
-      <div>
-        {children}
-      </div>
+      <Meta
+        description="Home page"
+        title="Home"
+      />
+      <Header />
+      {children}
+      <Footer />
     </Fragment>
   );
 };
