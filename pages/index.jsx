@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import App from '../components/Global/App';
+import Button from '../components/Ui/Button';
 import { Container } from '../components/Ui/Container';
 import Questions from '../components/Questions';
 
@@ -63,7 +64,7 @@ class Home extends Component {
           containerWrapper="modal-header"
         >
           {pageType === 'question' ? <Questions pageNumber={pageNumber} handleChange={this.handleRadio} handleClick={this.handleNext} /> : '' }
-          {pageType === 'final' ? <button role="button" onClick={this.handleResultsClick}>Get your soundtrack</button> : '' }
+          {pageType === 'final' ? <Button handleClick={this.handleResultsClick} role="button" title="Get your soundtrack" /> : '' }
           {pageType === 'results' ? <p>results here</p> : '' }
         </Container>
       </App>
