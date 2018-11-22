@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import update from 'immutability-helper';
 
 import App from '../components/Global/App';
 import { Container } from '../components/Ui/Container';
@@ -15,12 +14,19 @@ class Home extends Component {
   }
 
   handleNext = () => {
-    const { answers, pageNumber } = this.state;
+    const { answers, pageNumber, pageType } = this.state;
     const getPageAnswers = answers.filter(x => x.page === pageNumber);
     const getNext = getPageAnswers.find(x => x.next);
 
+    let newPageType = pageType;
+
+    if (pageNumber === 7) {
+      newPageType = 'final';
+    }
+
     this.setState({
       pageNumber: getNext.next,
+      pageType: newPageType,
     });
   }
 
@@ -43,6 +49,10 @@ class Home extends Component {
     });
   }
 
+  handleResultsClick = () => {
+    this.setState({ pageType: 'results' });
+  }
+
   render() {
     const { pageNumber, pageType } = this.state;
 
@@ -53,8 +63,8 @@ class Home extends Component {
           containerWrapper="modal-header"
         >
           {pageType === 'question' ? <Questions pageNumber={pageNumber} handleChange={this.handleRadio} handleClick={this.handleNext} /> : '' }
-          {/* {pageType === 'final' ? <Questions /> : '' }
-          {pageType === 'results' ? <Questions /> : '' } */}
+          {pageType === 'final' ? <button role="button" onClick={this.handleResultsClick}>Get your soundtrack</button> : '' }
+          {pageType === 'results' ? <p>results here</p> : '' }
         </Container>
       </App>
     );
