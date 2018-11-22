@@ -32,6 +32,10 @@ class Home extends Component {
     });
   }
 
+  handleReset = () => {
+    console.log('reset');
+  }
+
   handleRadio = (answer, qid) => {
     const { answers, pageNumber } = this.state;
     const updateItem = answers.find(x => x.name === qid);
@@ -70,7 +74,8 @@ class Home extends Component {
                 <p>{content.introCopy}</p>
                 <Questions
                   handleChange={this.handleRadio}
-                  handleClick={this.handleNext}
+                  handleNext={this.handleNext}
+                  handleReset={this.handleReset}
                   pageNumber={pageNumber}
                 />
               </Fragment>
@@ -80,7 +85,10 @@ class Home extends Component {
             ? (
               <Fragment>
                 <p>{content.introCopy}</p>
-                <Button handleClick={this.handleResultsClick} role="button" title={content.submitButton} />
+                <Button
+                  handleClick={this.handleResultsClick}
+                  title={content.buttons.submitButton}
+                />
               </Fragment>
             ) : '' }
 

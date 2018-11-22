@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '../Ui/Button';
+
+import content from '../../src/json/content.json';
 import questions from '../../src/json/questions.json';
 
 const questionsPropTypes = {
   handleChange: PropTypes.func.isRequired,
-  handleClick: PropTypes.func.isRequired,
+  handleNext: PropTypes.func.isRequired,
+  handleReset: PropTypes.func.isRequired,
   pageNumber: PropTypes.number.isRequired,
 };
 
@@ -21,7 +25,12 @@ const questionPropTypes = {
 };
 
 const Questions = (props) => {
-  const { handleChange, handleClick, pageNumber } = props;
+  const {
+    handleChange,
+    handleNext,
+    handleReset,
+    pageNumber,
+  } = props;
   const currentQuestions = questions.filter(x => x.page === pageNumber);
 
   return (
@@ -30,7 +39,8 @@ const Questions = (props) => {
         <Question key={index.toString()} handleChange={handleChange} question={question} />
       ))}
 
-      <button type="button" onClick={handleClick}>Next</button>
+      <Button handleClick={handleNext} title={content.buttons.next} />
+      <Button handleClick={handleReset} title={content.buttons.reset} />
     </div>
   );
 };

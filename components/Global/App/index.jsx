@@ -22,9 +22,9 @@ const App = (props) => {
   return (
     <Fragment>
       <Meta
-        description={content.metaDescription}
-        siteName={content.siteName}
-        title={content.metaTitle}
+        description={content.metaData.metaDescription}
+        siteName={content.metaData.siteName}
+        title={content.metaData.metaTitle}
       />
       <Header />
       {children}
