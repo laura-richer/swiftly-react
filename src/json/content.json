@@ -13,6 +13,10 @@
     "name": "Laura Richer",
     "website": "www.lauraricher.co.uk"
   },
+  "header": {
+    "logo": "swiftLY",
+    "welcome": "Hi there"
+  },
   "metaData": {
     "metaDescription": "Based on how your day has gone, here is your personal soundtrack to match your mood and activities. You can listen to the tracks here or save as a spotify playlist and listen anytime.",
     "metaTitle": "swiftLY | Generate a soundtrack for your day",
