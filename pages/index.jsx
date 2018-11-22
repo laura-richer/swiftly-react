@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import update from 'immutability-helper';
 
 import App from '../components/Global/App';
 import { Container } from '../components/Ui/Container';
@@ -22,23 +23,22 @@ class Home extends Component {
   }
 
   handleRadio = (answer, qid) => {
-    // console.log(answer);
-    // console.log(qid);
+    const { answers, pageNumber } = this.state;
+    const updateItem = answers.find(x => x.name === qid);
+    const index = answers.indexOf(updateItem);
+    const newAnswers = answers;
 
-    const { answers } = this.state;
-
-    // setState here to update answer for each question id
-
-    let updateItem = answers.find(x => x.name === qid);
-    let index = answers.indexOf(updateItem);
-
-    console.log(updateItem);
-    console.log(index);
+    newAnswers[index] = {
+      value: answer.value,
+      name: qid,
+      page: pageNumber,
+      next: answer.next,
+      cat: answer.category,
+    };
 
     this.setState({
-      answers[index]: updateItem,
+      answers: newAnswers,
     });
-    // this.answers[index] = {"value": answer.value, "name": "q-" + id, "page": page, "next": answer.next, "cat": answer.cat};
   }
 
   render() {
