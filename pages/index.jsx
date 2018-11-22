@@ -15,11 +15,13 @@ class Home extends Component {
   }
 
   handleNext = () => {
-    // go to next
+    const { answers, pageNumber } = this.state;
+    const getPageAnswers = answers.filter(x => x.page === pageNumber);
+    const getNext = getPageAnswers.find(x => x.next);
 
-    this.setState(prevState => ({
-      pageNumber: prevState.pageNumber + 1,
-    }));
+    this.setState({
+      pageNumber: getNext.next,
+    });
   }
 
   handleRadio = (answer, qid) => {
