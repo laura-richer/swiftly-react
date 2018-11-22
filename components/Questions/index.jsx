@@ -16,6 +16,7 @@ const questionsPropTypes = {
 const answerPropTypes = {
   answer: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
   handleChange: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
   qid: PropTypes.number.isRequired,
 };
 
@@ -56,6 +57,7 @@ const Question = (props) => {
           answer={answer}
           handleChange={handleChange}
           key={index.toString()}
+          index={index}
           qid={question.id}
         />
       ))}
@@ -64,7 +66,12 @@ const Question = (props) => {
 };
 
 const Answers = (props) => {
-  const { answer, handleChange, qid } = props;
+  const {
+    answer,
+    handleChange,
+    index,
+    qid,
+  } = props;
 
   return (
     <div>

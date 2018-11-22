@@ -4,6 +4,7 @@ import App from '../components/Global/App';
 import Button from '../components/UI/Button';
 import { Container } from '../components/UI/Container';
 import Questions from '../components/Questions';
+import PlaylistGen from '../components/PlaylistGen';
 
 import content from '../src/json/content.json';
 import defaultAnswers from '../src/json/answers.json';
@@ -27,13 +28,17 @@ class Home extends Component {
     }
 
     this.setState({
+      // answers: this.newAnswers,
       pageNumber: getNext.next,
       pageType: newPageType,
     });
   }
 
   handleReset = () => {
-    console.log('reset');
+    this.setState({
+      pageNumber: 1,
+      pageType: 'question',
+    });
   }
 
   handleRadio = (answer, qid) => {
@@ -60,7 +65,7 @@ class Home extends Component {
   }
 
   render() {
-    const { pageNumber, pageType } = this.state;
+    const { answers, pageNumber, pageType } = this.state;
 
     return (
       <App>
@@ -92,7 +97,21 @@ class Home extends Component {
               </Fragment>
             ) : '' }
 
-          {pageType === 'results' ? <p>results here</p> : '' }
+          {pageType === 'results'
+            ? (
+              <Fragment>
+                <p>{content.soundtrackCopy}</p>
+                <Button
+                  handleClick={this.handleResultsClick}
+                  title={content.buttons.save}
+                />
+                <Button
+                  handleClick={this.handleReset}
+                  title={content.buttons.startOver}
+                />
+                <PlaylistGen answers={answers} />
+              </Fragment>
+            ) : '' }
         </Container>
       </App>
     );
