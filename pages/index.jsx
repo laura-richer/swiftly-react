@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
 import App from '../components/Global/App';
-import Button from '../components/Ui/Button';
-import { Container } from '../components/Ui/Container';
+import Button from '../components/UI/Button';
+import { Container } from '../components/UI/Container';
 import Questions from '../components/Questions';
 
 import content from '../src/json/content.json';

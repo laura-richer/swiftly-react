@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '../Ui/Button';
+import Button from '../UI/Button';
 
 import content from '../../src/json/content.json';
 import questions from '../../src/json/questions.json';
