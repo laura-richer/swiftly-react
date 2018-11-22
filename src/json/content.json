@@ -1,5 +1,9 @@
 {
   "metaDescription": "Based on how your day has gone, here is your personal soundtrack to match your mood and activities. You can listen to the tracks here or save as a spotify playlist and listen anytime.",
   "metaTitle": "swiftLY | Generate a soundtrack for your day",
-  "siteName": "swiftLY"
+  "siteName": "swiftLY",
+  "introCopy": "Answer a few questions about your day, what you did and how you are feeling and you will get your very own unique soundtrack for your day based on your answers.",
+  "submitButton": "Get your soundtrack",
+  "next": "Next",
+  "reset": "Reset"
 }
