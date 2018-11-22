@@ -1,6 +1,4 @@
 {
-  "introCopy": "Answer a few questions about your day, what you did and how you are feeling and you will get your very own unique soundtrack for your day based on your answers.",
-  "soundtrackCopy": "Based on how your day has gone, here is your personal soundtrack to match your mood and activities. You can listen to the tracks here or save as a spotify playlist and listen anytime.",
   "buttons": {
     "listen": "Listen here",
     "next": "Next",
@@ -9,6 +7,12 @@
     "startAgain": "Start again",
     "startOver": "Start from the beginning",
     "submitButton": "Get your soundtrack"
+  },
+  "copy": {
+    "questions": "Answer a few questions about your day, what you did and how you are feeling and you will get your very own unique soundtrack for your day based on your answers.",
+    "playlist": "Based on how your day has gone, here is your personal soundtrack to match your mood and activities. You can listen to the tracks here or save as a spotify playlist and listen anytime.",
+    "save": "Your personal soundtrack has been saved to Spotify",
+    "share": "If you like your soundtrack give it a share on social media so your friends can hear your own personal soundtrack."
   },
   "footer": {
     "developed": "Developed by",

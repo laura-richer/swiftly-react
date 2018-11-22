@@ -80,7 +80,7 @@ class Home extends Component {
           {pageType === 'question'
             ? (
               <Fragment>
-                <p>{content.introCopy}</p>
+                <p>{content.copy.questions}</p>
                 <Questions
                   handleChange={this.handleRadio}
                   handleNext={this.handleNext}
@@ -93,18 +93,18 @@ class Home extends Component {
           {pageType === 'submit'
             ? (
               <Fragment>
-                <p>{content.introCopy}</p>
+                <p>{content.copy.questions}</p>
                 <Button
-                  handleClick={() => this.handlePageType('results')}
+                  handleClick={() => this.handlePageType('playlist')}
                   title={content.buttons.submitButton}
                 />
               </Fragment>
             ) : '' }
 
-          {pageType === 'results'
+          {pageType === 'playlist'
             ? (
               <Fragment>
-                <p>{content.soundtrackCopy}</p>
+                <p>{content.copy.playlist}</p>
                 <Button
                   handleClick={() => this.handlePageType('save')}
                   title={content.buttons.save}
@@ -120,8 +120,10 @@ class Home extends Component {
           {pageType === 'save'
             ? (
               <Fragment>
+                <h2>{content.copy.save}</h2>
                 <Button title={content.buttons.listen} handleClick={this.handlePlay} />
                 <Button title={content.buttons.startAgain} handleClick={this.handleReset} />
+                <p>{content.copy.share}</p>
               </Fragment>
             ) : '' }
         </Container>
