@@ -2,465 +2,467 @@
 {
   "id": 0,
   "page": 1,
-  "question": "I woke up today feeling...",
+  "title": "I woke up today feeling...",
   "answers": [
   {
     "id": 0,
     "next": 2,
-    "text": "Happy",
+    "title": "Happy",
     "value": "happy",
-    "cat": "indie_alt"
+    "category": "indie_alt"
   },
   {
     "id": 1,
     "next": 2,
-    "text": "Motivated",
+    "title": "Motivated",
     "value": "motivated",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 2,
     "next": 2,
-    "text": "Excited",
+    "title": "Excited",
     "value": "excited",
-    "cat": "workout"
+    "category": "workout"
   },
   {
     "id": 3,
     "next": 2,
-    "text": "Relaxed",
+    "title": "Relaxed",
     "value": "relaxed",
-    "cat": "chill"
+    "category": "chill"
   },
   {
     "id": 4,
     "next": 2,
-    "text": "Sad",
+    "title": "Sad",
     "value": "sad",
-    "cat": "blues"
+    "category": "blues"
   },
   {
     "id": 5,
     "next": 2,
-    "text": "Angry",
+    "title": "Angry",
     "value": "angry",
-    "cat": "punk"
+    "category": "punk"
   },
   {
     "id": 6,
     "next": 2,
-    "text": "Stressed",
+    "title": "Stressed",
     "value": "stressed",
-    "cat": "metal"
+    "category": "metal"
   }]
 },
 {
   "id": 1,
   "page": 1,
-  "question": "The weather was...",
+  "title": "The weather was...",
   "answers": [
   {
     "id": 0,
-    "text": "Sunny",
+    "title": "Sunny",
     "value": "sunny",
-    "cat": "reggae"
+    "category": "reggae"
   },
   {
     "id": 1,
-    "text": "Crisp",
+    "title": "Crisp",
     "value": "crisp",
-    "cat": "mood"
+    "category": "mood"
   },
   {
     "id": 2,
-    "text": "Raining",
+    "title": "Raining",
     "value": "raining",
-    "cat": "blues"
+    "category": "blues"
   },
   {
     "id": 3,
-    "text": "Dark",
+    "title": "Dark",
     "value": "dark",
-    "cat": "mood"
+    "category": "mood"
   },
   {
     "id": 4,
-    "text": "Cold",
+    "title": "Cold",
     "value": "cold",
-    "cat": "mood"
+    "category": "mood"
   },
   {
     "id": 5,
-    "text": "Windy",
+    "title": "Windy",
     "value": "windy",
-    "cat": "blues"
+    "category": "blues"
   }]
 },
 {
   "id": 2,
   "page": 2,
-  "question": "Today I am...",
+  "title": "Today I am...",
   "answers": [
   {
     "id": 0,
     "next": 3,
-    "text": "Going to work",
+    "title": "Going to work",
     "value": "work",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 1,
     "next": 6,
-    "text": "Going to School",
+    "title": "Going to School",
     "value": "school",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 2,
     "next": 4,
-    "text": "Having a day off",
+    "title": "Having a day off",
     "value": "dayoff",
-    "cat": "travel"
+    "category": "travel"
   },
   {
     "id": 3,
     "next": 4,
-    "text": "No work/school it’s the weekend!",
+    "title": "No work/school it’s the weekend!",
     "value": "weekend",
-    "cat": "reggae"
+    "category": "reggae"
   }]
 },
 {
   "id": 3,
   "page": 2,
-  "question": "This makes me...",
+  "title": "This makes me...",
   "answers": [
   {
     "id": 0,
-    "text": "Happy",
+    "title": "Happy",
     "value": "happy",
-    "cat": "indie_alt"
+    "category": "indie_alt"
   },
   {
     "id": 1,
-    "text": "Motivated",
+    "title": "Motivated",
     "value": "motivated",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 2,
-    "text": "Excited",
+    "title": "Excited",
     "value": "excited",
-    "cat": "workout"
+    "category": "workout"
   },
   {
     "id": 3,
-    "text": "Relaxed",
+    "title": "Relaxed",
     "value": "relaxed",
-    "cat": "chill"
+    "category": "chill"
   },
   {
     "id": 4,
-    "text": "Sad",
+    "title": "Sad",
     "value": "sad",
-    "cat": "blues"
+    "category": "blues"
   },
   {
     "id": 5,
-    "text": "Angry",
+    "title": "Angry",
     "value": "angry",
-    "cat": "punk"
+    "category": "punk"
   },
   {
     "id": 6,
-    "text": "Stressed",
+    "title": "Stressed",
     "value": "stressed",
-    "cat": "metal"
+    "category": "metal"
   }]
 },
 {
   "id": 4,
   "page": 3,
-  "question": "At work I will be...",
+  "title": "At work I will be...",
   "answers": [
   {
     "id": 0,
     "next": 6,
-    "text": "Relaxed",
+    "title": "Relaxed",
     "value": "relaxed",
-    "cat": "chill"
+    "category": "chill"
   },
   {
     "id": 1,
     "next": 6,
-    "text": "Motivated",
+    "title": "Motivated",
     "value": "motivated",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 2,
     "next": 6,
-    "text": "Excited",
+    "title": "Excited",
     "value": "excited",
-    "cat": "workout"
+    "category": "workout"
   },
   {
     "id": 3,
     "next": 6,
-    "text": "Stressed",
+    "title": "Stressed",
     "value": "stressed",
-    "cat": "metal"
+    "category": "metal"
   },
   {
     "id": 4,
     "next": 6,
-    "text": "Bored",
+    "title": "Bored",
     "value": "bored",
-    "cat": "mood"
+    "category": "mood"
   },
   {
     "id": 5,
     "next": 6,
-    "text": "Angry",
+    "title": "Angry",
     "value": "angry",
-    "cat": "punk"
+    "category": "punk"
   },
   {
     "id": 6,
     "next": 6,
-    "text": "Busy",
+    "title": "Busy",
     "value": "busy",
-    "cat": "rock"
+    "category": "rock"
   },
   {
     "id": 7,
     "next": 6,
-    "text": "Rushed",
+    "title": "Rushed",
     "value": "rushed",
-    "cat": "metal"
+    "category": "metal"
   }]
 },
 {
   "id": 5,
   "page": 4,
-  "question": "With my day off I am going to...",
+  "title": "With my day off I am going to...",
   "answers": [
   {
     "id": 0,
     "next": 6,
-    "text": "Relax",
-    "value": "relax"
+    "title": "Relax",
+    "value": "relax",
+    "category": "chill"
   },
   {
     "id": 1,
     "next": 6,
-    "text": "Run Errands",
+    "title": "Run Errands",
     "value": "errands",
-    "cat": "workout"
+    "category": "workout"
   },
   {
     "id": 2,
     "next": 5,
-    "text": "Enjoy a Hobby",
+    "title": "Enjoy a Hobby",
     "value": "hobby",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 3,
     "next": 6,
-    "text": "Exercise",
+    "title": "Exercise",
     "value": "exercise",
-    "cat": "workout"
+    "category": "workout"
   },
   {
     "id": 4,
     "next": 6,
-    "text": "Do Housework/Chores",
+    "title": "Do Housework/Chores",
     "value": "chores",
-    "cat": "blues"
+    "category": "blues"
   }]
 },
 {
   "id": 6,
   "page": 4,
-  "question": "This makes me...",
+  "title": "This makes me...",
   "answers": [
   {
     "id": 0,
-    "text": "Happy",
+    "title": "Happy",
     "value": "happy",
-    "cat": "indie_alt"
+    "category": "indie_alt"
   },
   {
     "id": 1,
-    "text": "Motivated",
+    "title": "Motivated",
     "value": "motivated",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 2,
-    "text": "Excited",
+    "title": "Excited",
     "value": "excited",
-    "cat": "workout"
+    "category": "workout"
   },
   {
     "id": 3,
-    "text": "Relaxed",
+    "title": "Relaxed",
     "value": "relaxed",
-    "cat": "chill"
+    "category": "chill"
   },
   {
     "id": 4,
-    "text": "Sad",
+    "title": "Sad",
     "value": "sad",
-    "cat": "blues"
+    "category": "blues"
   },
   {
     "id": 5,
-    "text": "Angry",
+    "title": "Angry",
     "value": "angry",
-    "cat": "punk"
+    "category": "punk"
   },
   {
     "id": 6,
-    "text": "Stressed",
+    "title": "Stressed",
     "value": "stressed",
-    "cat": "metal"
+    "category": "metal"
   }]
 },
 {
   "id": 7,
   "page": 5,
-  "question": "What is your hobby?",
+  "title": "What is your hobby?",
   "answers": [
   {
     "id": 0,
     "next": 6,
-    "text": "A Sport",
+    "title": "A Sport",
     "value": "sport",
-    "cat": "workout"
+    "category": "workout"
   },
   {
     "id": 1,
     "next": 6,
-    "text": "Something Crafty",
+    "title": "Something Crafty",
     "value": "craft",
-    "cat": "focus"
+    "category": "focus"
   },
   {
     "id": 2,
     "next": 6,
-    "text": "Something Practical",
+    "title": "Something Practical",
     "value": "practical",
-    "cat": "rock"
+    "category": "rock"
   },
   {
     "id": 3,
     "next": 6,
-    "text": "Musical",
+    "title": "Musical",
     "value": "musical",
-    "cat": "jazz"
+    "category": "jazz"
   },
   {
     "id": 4,
     "next": 6,
-    "text": "Techy",
+    "title": "Techy",
     "value": "techy",
-    "cat": "funk"
+    "category": "funk"
   }]
 },
 {
   "id": 8,
   "page": 6,
-  "question": "This evening I am going to...",
+  "title": "This evening I am going to...",
   "answers": [
   {
     "id": 0,
     "next": 7,
-    "text": "Relax",
-    "value": "relax"
+    "title": "Relax",
+    "value": "relax",
+    "category": "chill"
   },
   {
     "id": 1,
     "next": 7,
-    "text": "See Friends",
+    "title": "See Friends",
     "value": "friends",
-    "cat": "pop"
+    "category": "pop"
   },
   {
     "id": 2,
     "next": 7,
-    "text": "Have Friends over for dinner",
+    "title": "Have Friends over for dinner",
     "value": "dinner",
-    "cat": "dinner"
+    "category": "dinner"
   },
   {
     "id": 3,
     "next": 7,
-    "text": "Go out for the evening",
+    "title": "Go out for the evening",
     "value": "evening",
-    "cat": "dinner"
+    "category": "dinner"
   },
   {
     "id": 4,
     "next": 7,
-    "text": "Go out for the night",
+    "title": "Go out for the night",
     "value": "night",
-    "cat": "pop"
+    "category": "pop"
   },
   {
     "id": 5,
     "next": 7,
-    "text": "PARTY!",
+    "title": "PARTY!",
     "value": "party",
-    "cat": "edm_dance"
+    "category": "edm_dance"
   }]
 },
 {
   "id": 9,
   "page": 7,
-  "question": "I'm ready to go to sleep, I feel...",
+  "title": "I'm ready to go to sleep, I feel...",
   "answers": [
   {
     "id": 0,
     "next": 8,
-    "text": "Relaxed",
+    "title": "Relaxed",
     "value": "relaxed",
-    "cat": "chill"
+    "category": "chill"
   },
   {
     "id": 1,
     "next": 8,
-    "text": "Happy",
+    "title": "Happy",
     "value": "happy",
-    "cat": "indie_alt"
+    "category": "indie_alt"
   },
   {
     "id": 2,
     "next": 8,
-    "text": "Tired",
+    "title": "Tired",
     "value": "tired",
-    "cat": "sleep"
+    "category": "sleep"
   },
   {
     "id": 3,
     "next": 8,
-    "text": "Sad",
+    "title": "Sad",
     "value": "sad",
-    "cat": "blues"
+    "category": "blues"
   },
   {
     "id": 4,
     "next": 8,
-    "text": "Angry",
+    "title": "Angry",
     "value": "angry",
-    "cat": "punk"
+    "category": "punk"
   },
   {
     "id": 5,
     "next": 8,
-    "text": "Sleep? Its Friday/Saturday night, no time for sleep!",
+    "title": "Sleep? Its Friday/Saturday night, no time for sleep!",
     "value": "sleep",
-    "cat": "edm_dance"
+    "category": "edm_dance"
   }]
 }]

@@ -1,6 +1,6 @@
 const apiPrefix = process.env.API_PREFIX || 'develop';
 const url = process.env.URL || 'develop';
-const API_URL = `http://api.${apiPrefix}.xbox-interactive.com`;
+const API_URL = 'http://localhost:3000';
 
 let SITE_URL;
 

@@ -5,7 +5,9 @@ import Footer from '../Footer';
 import Header from '../Header';
 import Meta from '../Meta';
 
-import '../../src/scss/all.scss';
+import content from '../../../src/json/content.json';
+
+import '../../../src/scss/all.scss';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -20,8 +22,9 @@ const App = (props) => {
   return (
     <Fragment>
       <Meta
-        description="Based on how your day has gone, here is your personal soundtrack to match your mood and activities. You can listen to the tracks here or save as a spotify playlist and listen anytime."
-        title="swiftLY | Generate a soundtrack for your day"
+        description={content.metaDescription}
+        siteName={content.siteName}
+        title={content.metaTitle}
       />
       <Header />
       {children}
