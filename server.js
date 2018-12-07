@@ -4,14 +4,14 @@ const compression = require('compression');
 const express = require('express');
 const helmet = require('helmet');
 const next = require('next');
+const routes = require('./config/routes');
 
 
 // Configure environment and NextJS
 const env = process.env.NODE_ENV || 'development';
 const port = parseInt(process.env.PORT, 10) || 3000;
 const app = next({ dev: env === 'development' });
-const handle = app.getRequestHandler();
-
+const handle = routes.getRequestHandler(app);
 
 // Prepare and launch app
 app.prepare().then(() => {

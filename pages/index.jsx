@@ -1,4 +1,7 @@
 import React, { Component, Fragment } from 'react';
+import window from 'global';
+import ls from 'local-storage';
+import SpotifyWebApi from 'spotify-web-api-js';
 
 import App from '../components/Global/App';
 import Button from '../components/UI/Button';
@@ -9,11 +12,46 @@ import PlaylistGen from '../components/PlaylistGen';
 import content from '../src/json/content.json';
 import defaultAnswers from '../src/json/answers.json';
 
+import {
+  CLIENT_ID,
+  CLIENT_SECRET,
+  CALLBACK_URL,
+  SCOPE,
+} from '../config/constants';
+
+if (ls.get('accessToken')) {
+  window.onbeforeunload = () => {
+    localStorage.clear();
+    return '';
+  };
+}
+
 class Home extends Component {
   state = {
     answers: defaultAnswers,
     pageNumber: 1,
-    pageType: 'question',
+    pageType: '',
+  }
+
+  componentDidMount = () => {
+    console.log(ls.get('accessToken'));
+
+    if (!ls.get('accessToken')) {
+      this.setState({
+        pageType: 'login',
+      });
+    } else {
+      const spotifyApi = new SpotifyWebApi();
+
+      this.setState({
+        pageType: 'question',
+      });
+    }
+  };
+
+  handleLogin = async () => {
+    const url = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${CALLBACK_URL}&scope=${SCOPE}&response_type=code`;
+    window.location.href = url;
   }
 
   handleRadio = (answer, qid) => {
@@ -30,9 +68,9 @@ class Home extends Component {
       cat: answer.category,
     };
 
-    this.setState({
-      answers: newAnswers,
-    });
+    // this.setState({
+    //   answers: newAnswers,
+    // });
   }
 
   handleNext = () => {
@@ -53,8 +91,9 @@ class Home extends Component {
     });
   }
 
-  handlePageType = (newPageType) => {
+  handlePageType = (newPageType, oldPageType) => {
     this.setState({ pageType: newPageType });
+    console.log(oldPageType);
   }
 
   handlePlay = () => {
@@ -77,6 +116,13 @@ class Home extends Component {
           containerName="modal"
           containerWrapper="modal-header"
         >
+          {pageType === 'login'
+            ? (
+              <Fragment>
+                <button type="button" onClick={this.handleLogin}>Log in</button>
+              </Fragment>
+            ) : '' }
+
           {pageType === 'question'
             ? (
               <Fragment>
@@ -95,7 +141,7 @@ class Home extends Component {
               <Fragment>
                 <p>{content.copy.questions}</p>
                 <Button
-                  handleClick={() => this.handlePageType('playlist')}
+                  handleClick={() => this.handlePageType('playlist', pageType)}
                   title={content.buttons.submitButton}
                 />
               </Fragment>
